@@ -1079,3 +1079,12 @@ const explanationData = ref([
   },
 ])
 </script>
+<style scoped>
+.colorBox.sticky {
+  position: fixed;
+  top: 50px;
+  left:275px;
+  z-index: 1000;
+  border-radius: 0 0 8px 8px;  
+}
+</style>
