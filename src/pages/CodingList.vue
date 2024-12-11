@@ -2050,7 +2050,7 @@
           <td title="2depth"></td>
           <td title="3depth"></td>
           <td title="파일명">
-            <a href="/sub/agitc/1407" target="_blank">UID-AC-107</a>
+            <a href="/sub/ac/1407" target="_blank">UID-AC-107</a>
           </td>
           <td title="업데이트일자">2024-12-11</td>
           <td title="작업자">김주연</td>
