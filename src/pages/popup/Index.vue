@@ -159,9 +159,6 @@
     <AC_1406
       v-else-if="$route.params.id === '1406' && $route.params.category === 'ac'"
     />
-    <AC_1407
-      v-else-if="$route.params.id === '1407' && $route.params.category === 'ac'"
-    />
     <AC_1408
       v-else-if="$route.params.id === '1408' && $route.params.category === 'ac'"
     />
@@ -245,7 +242,6 @@ import AC_1403 from '@/pages/popup/AC/AC_1403.vue'
 import AC_1404 from '@/pages/popup/AC/AC_1404.vue'
 import AC_1405 from '@/pages/popup/AC/AC_1405.vue'
 import AC_1406 from '@/pages/popup/AC/AC_1406.vue'
-import AC_1407 from '@/pages/popup/AC/AC_1407.vue'
 import AC_1408 from '@/pages/popup/AC/AC_1408.vue'
 
 import Temp1 from '@/pages/popup/temp/Temp1.vue'

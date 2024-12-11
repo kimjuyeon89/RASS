@@ -1978,17 +1978,95 @@
         </tr>
       </thead>
       <tbody>
-        <!-- <tr>
-          <td title="1depth">육안검수 상세조회</td>
+        <tr>
+          <td title="1depth">육안검수 사업관리</td>
           <td title="2depth"></td>
           <td title="3depth"></td>
           <td title="파일명">
-            <a href="/sub/ac/1401" target="_blank">UIS-AC-101</a>
+            <a href="/sub/ac/1401" target="_blank">UID-AC-101</a>
           </td>
-          <td title="업데이트일자"></td>
-          <td title="작업자"></td>
+          <td title="업데이트일자">2024-12-11</td>
+          <td title="작업자">김주연</td>
           <td title="비고"></td>
-        </tr> -->
+        </tr>
+        <tr>
+          <td title="1depth">육안검수 사업상세조회</td>
+          <td title="2depth"></td>
+          <td title="3depth"></td>
+          <td title="파일명">
+            <a href="/sub/ac/1402" target="_blank">UID-AC-102</a>
+          </td>
+          <td title="업데이트일자">2024-12-11</td>
+          <td title="작업자">김주연</td>
+          <td title="비고"></td>
+        </tr>
+        <tr>
+          <td title="1depth">육안검수 결과 팝업</td>
+          <td title="2depth"></td>
+          <td title="3depth"></td>
+          <td title="파일명">
+            <a href="/popup/ac/1403" target="_blank">UID-AC-103</a>
+          </td>
+          <td title="업데이트일자">2024-12-11</td>
+          <td title="작업자">김주연</td>
+          <td title="비고"></td>
+        </tr>
+        <tr>
+          <td title="1depth">육안검수 검수의견서 팝업</td>
+          <td title="2depth"></td>
+          <td title="3depth"></td>
+          <td title="파일명">
+            <a href="/popup/ac/1404" target="_blank">UID-AC-104</a>
+          </td>
+          <td title="업데이트일자">2024-12-11</td>
+          <td title="작업자">김주연</td>
+          <td title="비고"></td>
+        </tr>
+        <tr>
+          <td title="1depth">육안검수 보완 팝업</td>
+          <td title="2depth"></td>
+          <td title="3depth"></td>
+          <td title="파일명">
+            <a href="/popup/ac/1405" target="_blank">UID-AC-105</a>
+          </td>
+          <td title="업데이트일자">2024-12-11</td>
+          <td title="작업자">김주연</td>
+          <td title="비고"></td>
+        </tr>
+        <tr>
+          <td title="1depth">육안검수 보완결과 팝업
+          </td>
+          <td title="2depth"></td>
+          <td title="3depth"></td>
+          <td title="파일명">
+            <a href="/popup/ac/1406" target="_blank">UID-AC-106</a>
+          </td>
+          <td title="업데이트일자">2024-12-11</td>
+          <td title="작업자">김주연</td>
+          <td title="비고"></td>
+        </tr>
+        <tr>
+          <td title="1depth">육안검수 검수서식 관리</td>
+          <td title="2depth"></td>
+          <td title="3depth"></td>
+          <td title="파일명">
+            <a href="/popup/ac/1407" target="_blank">UID-AC-107</a>
+          </td>
+          <td title="업데이트일자">2024-12-11</td>
+          <td title="작업자">김주연</td>
+          <td title="비고"></td>
+        </tr>
+        <tr>
+          <td title="1depth">육안검수 검수항목 관리 팝업</td>
+          <td title="2depth"></td>
+          <td title="3depth"></td>
+          <td title="파일명">
+            <a href="/popup/ac/1408" target="_blank">UID-AC-108</a>
+          </td>
+          <td title="업데이트일자">2024-12-11</td>
+          <td title="작업자">김주연</td>
+          <td title="비고"></td>
+        </tr>
       </tbody>
     </table>
   </div>

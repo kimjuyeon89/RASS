@@ -534,6 +534,8 @@
 }
 
 
+
+//2024.12.11 추가 - 김주연
 .page-num{
   margin-bottom: 10px;
   font-size: var(--fs14);
@@ -553,3 +555,65 @@
   color: var(--text-color-gray1);
 }
 
+.baseTable.rowType.type2 {
+  border-top: 1px solid #8294c8;
+
+  th { border-right: 1px solid #8294c8; 
+    border-bottom: 1px solid #8294c8; 
+    border-left: 1px solid #8294c8; 
+    background-color: #2A45AE; 
+    color: #fff; 
+  
+  &.bg-sky{
+    background-color: #EEF2FA;
+    color: rgba(34, 34, 34, 1);
+  }
+  &.bg-wt{
+    background-color: #fff;
+  }
+  }
+  td{
+    background-color: #EEF2FA;
+    &.bg-wt{
+      background-color: #fff;
+    border-bottom: 1px solid #8294c8;
+    border-right: 1px solid #8294c8; 
+    }
+  }
+
+  tr:last-of-type td { 
+    border-bottom: 1px solid #8294c8; 
+    border-right: 1px solid #8294c8; 
+  }
+}
+
+
+.sectionContainer{
+  &.w-50{
+    align-items: flex-start;
+    .sectionBox{
+      flex:1;
+      margin-top: 0;
+      height: 262px;
+    }
+  }
+  &.half{position: relative;
+    .sectionBox{height: unset}
+    &.list{
+      column-gap: 164px;
+      &::before{
+        content: '';
+        background: url('../../assets/icons/ico-arrow-right.svg') no-repeat center center;
+        border: 1px solid #E4E4E4;
+        border-radius: 50%;
+        position: absolute;
+        transform: translate(-50%, -50%);
+        left: 50%;
+        top: 50%;
+        width: 64px;
+        height: 64px;
+      }
+    }
+  }
+
+}

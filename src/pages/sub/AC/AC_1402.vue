@@ -1,14 +1,16 @@
 <template>
-  <BaseTab>
+  <BaseTab styleClassName="hasTabLength7">
     <template v-slot:tabItem>
       <BaseTabItem :data="tabs1" v-model="current1" />
     </template>
 
     <template v-slot:tabContent>
-      <BaseTabContent :current="current1" name="목록등록">
+      <BaseTabContent :current="current1" name="목록등록" >
         <section class="sectionContainer">
-          <BaseTable styleClassName="rowType">
+          <BaseTable styleClassName="rowType type2">
             <colgroup>
+              <col style="width: 140px" />
+              <col style="width: 140px" />
               <col style="width: 140px" />
               <col style="width: 140px" />
               <col style="width: 140px" />
@@ -17,27 +19,20 @@
 
             <tbody>
               <tr>
-                <th scope="row" class="text-center">데이터유형</th>
-                <td class="text-center">
-                  <BaseSelect
-                    initialSelectValue="실폭도로"
-                    :options="selectList"
-                  />
+                <th scope="row" class="text-center">등록건수</th>
+                <td class="text-right">
+                  2,393 건
                 </td>
-                <th scope="row" class="text-center">검수항목코드</th>
-                <td class="text-center">
-                  <BaseInput inputType="text" inputValue="" readonly />
+                <th scope="row" class="text-center">총 기준 수량</th>
+                <td class="text-right">
+                  15,801 건
                 </td>
-              </tr>
-              <tr>
-                <th scope="row" class="text-center">검수항목명</th>
-                <td class="text-center" colspan="3">
-                  <BaseInput
-                    inputType="text"
-                    inputValue="객체는 누락없이 잘 등록되어 있는가?"
-                  />
+                <th scope="row" class="text-center">용량</th>
+                <td class="text-right">
+                  2,837 Gb
                 </td>
               </tr>
+            
             </tbody>
           </BaseTable>
         </section>
@@ -65,7 +60,7 @@
             </div>
             <div class="searchColumn">
               <span class="searchLabel">데이터명</span>
-              <BaseInput inputType="text" inputValue="" />
+              <BaseInput inputType="text" inputValue="" inline-style="min-width: 150px"/>
             </div>
             <div class="searchColumn">
               <span class="searchLabel">등록일자</span>
@@ -125,7 +120,9 @@
                   <th scope="col" class="text-center">기준수량</th>
                   <th scope="col" class="text-center">등록일자</th>
                   <th scope="col" class="text-center">등록자</th>
-                  <th scope="col" class="text-center">등록파일</th>
+                  <th scope="col" class="text-center">
+                    관리기관
+                  </th>
                 </tr>
               </thead>
               <tbody>
@@ -136,7 +133,7 @@
                   <td class="text-center">7</td>
                   <td class="text-center">24/10/30</td>
                   <td class="text-center">관리자</td>
-                  <td class="text-center">등록파일</td>
+                  <td class="text-center"><a herf="#"><i class="ico fill-file"></i></a></td>
                 </tr>
                 <tr>
                   <td class="text-center">2</td>
@@ -145,7 +142,7 @@
                   <td class="text-center">7</td>
                   <td class="text-center">24/10/30</td>
                   <td class="text-center">관리자</td>
-                  <td class="text-center">등록파일</td>
+                  <td class="text-center"><a herf="#"><i class="ico fill-file"></i></a></td>
                 </tr>
                 <tr>
                   <td class="text-center">3</td>
@@ -154,7 +151,7 @@
                   <td class="text-center">7</td>
                   <td class="text-center">24/10/30</td>
                   <td class="text-center">관리자</td>
-                  <td class="text-center">등록파일</td>
+                  <td class="text-center"><a herf="#"><i class="ico fill-file"></i></a></td>
                 </tr>
                 <tr>
                   <td class="text-center">4</td>
@@ -163,7 +160,7 @@
                   <td class="text-center">7</td>
                   <td class="text-center">24/10/30</td>
                   <td class="text-center">관리자</td>
-                  <td class="text-center">등록파일</td>
+                  <td class="text-center"><a herf="#"><i class="ico fill-file"></i></a></td>
                 </tr>
                 <tr>
                   <td class="text-center">5</td>
@@ -172,7 +169,7 @@
                   <td class="text-center">7</td>
                   <td class="text-center">24/10/30</td>
                   <td class="text-center">관리자</td>
-                  <td class="text-center">등록파일</td>
+                  <td class="text-center"><a herf="#"><i class="ico fill-file"></i></a></td>
                 </tr>
               </tbody>
             </BaseTable>
@@ -191,46 +188,106 @@
         <!-- //sectionContainer -->
       </BaseTabContent>
       <BaseTabContent :current="current1" name="본부검수">
-        <div class="sectionTitleGroup">
+        <section class="sectionContainer">
+          <BaseTable styleClassName="rowType type2">
+            <colgroup>
+              <col style="width: 140px" />
+              <col style="width: 140px" />
+              <col style="width: 140px" />
+              <col style="width: 140px" />
+              <col style="width: 140px" />
+              <col style="width: 140px" />
+            </colgroup>
+
+            <tbody>
+              <tr>
+                <th scope="row" class="text-center" colspan="2">본부검수 결과</th>
+                <th scope="row" class="text-center" colspan="2">건수 차트</th>
+                <th scope="row" class="text-center" colspan="2">기준수량 차트</th>
+              </tr>
+              <tr>
+                <th scope="row" class="text-center bg-sky">전체건수</th>
+                <td class="text-right bg-wt">
+                  2,387 건
+                </td>
+                <th scope="row" class="text-center bg-wt" colspan="2" rowspan="6"></th>
+                <th scope="row" class="text-center bg-wt" colspan="2" rowspan="6"></th>
+              </tr>
+              <tr>
+                <th scope="row" class="text-center bg-sky">전체수량</th>
+                <td class="text-right bg-wt">
+                  15,801 건
+                </td>
+              </tr>
+              <tr>
+                <th scope="row" class="text-center bg-sky">성과(건수)</th>
+                <td class="text-right bg-wt">
+                  2,387 건
+                </td>
+              </tr>
+              <tr>
+                <th scope="row" class="text-center bg-sky">성과(수량)</th>
+                <td class="text-right bg-wt">
+                  15,801 건
+                </td>
+              </tr>
+              <tr>
+                <th scope="row" class="text-center bg-sky">오류건수</th>
+                <td class="text-right bg-wt">
+                  57 건
+                </td>
+              </tr>
+              <tr>
+                <th scope="row" class="text-center bg-sky">오류객체건수</th>
+                <td class="text-right bg-wt">
+                  724 건
+                </td>
+              </tr>
+            </tbody>
+          </BaseTable>
+        </section>
+        <section class="sectionContainer col">
+          <div class="sectionTitleGroup">
           <div class="sectionDescriptionArea">
-            <p class="sectionDescription">본부검수 목록을 조회합니다.</p>
+            <p class="sectionDescription">본사검수 목록을 조회합니다.</p>
           </div>
         </div>
-        <div class="searchArea">
-          <!-- searchColumnRowContainer -->
-          <div class="searchColumnRowContainer">
-            <!-- searchColumnRow -->
-            <div class="searchColumnRow">
-              <div class="searchColumn">
-                <span class="searchLabel">데이터명</span>
-                <BaseInput inputType="text" inputValue="" />
+          <div class="searchArea">
+            <!-- searchColumnRowContainer -->
+            <div class="searchColumnRowContainer">
+              <!-- searchColumnRow -->
+              <div class="searchColumnRow">
+                <div class="searchColumn">
+                  <span class="searchLabel">데이터명</span>
+                  <BaseInput inputType="text" inputValue="" />
+                </div>
+                <div class="searchColumn">
+                  <span class="searchLabel">검수자</span>
+                  <BaseInput inputType="text" inputValue="" />
+                </div>
               </div>
-              <div class="searchColumn">
-                <span class="searchLabel">검수자</span>
-                <BaseInput inputType="text" inputValue="" />
+              <!-- //searchColumnRow -->
+              <!-- searchColumnRow -->
+              <div class="searchColumnRow" style="padding-right: 119px">
+                <div class="searchColumn">
+                  <span class="searchLabel">지역</span>
+                  <BaseSelect initialSelectValue="전체" :options="selectList" />
+                  <BaseSelect initialSelectValue="전체" :options="selectList" />
+                  <BaseSelect initialSelectValue="선택" :options="selectList" />
+                </div>
+  
+                <div class="searchColumn">
+                  <span class="searchLabel">진행상태</span>
+                  <BaseSelect initialSelectValue="전체" :options="selectList" />
+                </div>
+  
+                <BaseButton label="검색" styleClassName="md bgGray" />
               </div>
+              <!-- //searchColumnRow -->
             </div>
-            <!-- //searchColumnRow -->
-            <!-- searchColumnRow -->
-            <div class="searchColumnRow" style="padding-right: 119px">
-              <div class="searchColumn">
-                <span class="searchLabel">지역</span>
-                <BaseSelect initialSelectValue="전체" :options="selectList" />
-                <BaseSelect initialSelectValue="전체" :options="selectList" />
-                <BaseSelect initialSelectValue="선택" :options="selectList" />
-              </div>
-
-              <div class="searchColumn">
-                <span class="searchLabel">진행상태</span>
-                <BaseSelect initialSelectValue="전체" :options="selectList" />
-              </div>
-
-              <BaseButton label="검색" styleClassName="md bgGray" />
-            </div>
-            <!-- //searchColumnRow -->
+            <!-- //searchColumnRowContainer -->
           </div>
-          <!-- //searchColumnRowContainer -->
-        </div>
+        </section>
         <!-- sectionContainer -->
         <section class="sectionContainer col">
           <div class="sectionBox">
@@ -270,9 +327,9 @@
                   <td class="text-center">7</td>
                   <td class="text-center">관리자</td>
                   <td class="text-center">완료</td>
-                  <td class="text-center">팝업아이콘</td>
-                  <td class="text-center">팝업아이콘</td>
-                  <td class="text-center">파일등록아이콘</td>
+                  <td class="text-center"><i class="ico fill-location"></i></td>
+                  <td class="text-center"></td>
+                  <td class="text-center"></td>
                 </tr>
                 <tr>
                   <td class="text-center">10</td>
@@ -281,9 +338,9 @@
                   <td class="text-center">7</td>
                   <td class="text-center">관리자</td>
                   <td class="text-center">완료</td>
-                  <td class="text-center">팝업아이콘</td>
-                  <td class="text-center">팝업아이콘</td>
-                  <td class="text-center">파일등록아이콘</td>
+                  <td class="text-center"><i class="ico fill-location"></i></td>
+                  <td class="text-center"><i class="ico fill-location"></i></td>
+                  <td class="text-center"><i class="ico fill-file"></i></td>
                 </tr>
                 <tr>
                   <td class="text-center">9</td>
@@ -292,9 +349,9 @@
                   <td class="text-center">7</td>
                   <td class="text-center">관리자</td>
                   <td class="text-center">완료</td>
-                  <td class="text-center">팝업아이콘</td>
-                  <td class="text-center">팝업아이콘</td>
-                  <td class="text-center">파일등록아이콘</td>
+                  <td class="text-center"><i class="ico fill-location"></i></td>
+                  <td class="text-center"><i class="ico fill-location"></i></td>
+                  <td class="text-center"><i class="ico fill-location"></i></td>
                 </tr>
                 <tr>
                   <td class="text-center">8</td>
@@ -303,9 +360,9 @@
                   <td class="text-center">7</td>
                   <td class="text-center">관리자</td>
                   <td class="text-center">완료</td>
-                  <td class="text-center">팝업아이콘</td>
-                  <td class="text-center">팝업아이콘</td>
-                  <td class="text-center">파일등록아이콘</td>
+                  <td class="text-center"></td>
+                  <td class="text-center"></td>
+                  <td class="text-center"></td>
                 </tr>
               </tbody>
             </BaseTable>
@@ -325,53 +382,113 @@
       </BaseTabContent>
 
       <BaseTabContent :current="current1" name="본사검수">
-        <div class="sectionTitleGroup">
-          <div class="sectionDescriptionArea">
-            <p class="sectionDescription">본수검수 목록을 조회합니다.</p>
-          </div>
-        </div>
-        <div class="searchArea">
-          <!-- searchColumnRowContainer -->
-          <div class="searchColumnRowContainer">
-            <!-- searchColumnRow -->
-            <div class="searchColumnRow">
-              <div class="searchColumn">
-                <span class="searchLabel">데이터명</span>
-                <BaseInput inputType="text" inputValue="" />
-              </div>
-              <div class="searchColumn">
-                <span class="searchLabel">검수자</span>
-                <BaseInput inputType="text" inputValue="" />
-              </div>
-              <div class="searchColumn">
-                <span class="searchLabel">검수자</span>
-                <BaseInput inputType="text" inputValue="" />
-              </div>
-            </div>
-            <!-- //searchColumnRow -->
-            <!-- searchColumnRow -->
-            <div class="searchColumnRow" style="padding-right: 119px">
-              <div class="searchColumn">
-                <span class="searchLabel">시군구</span>
-                <BaseSelect initialSelectValue="전체" :options="selectList" />
-                <BaseSelect initialSelectValue="전체" :options="selectList" />
-                <BaseSelect initialSelectValue="선택" :options="selectList" />
-                <BaseCheckbox id="check1" :isLabel="true" label="(구)" />
-              </div>
+        <section class="sectionContainer">
+          <BaseTable styleClassName="rowType type2">
+            <colgroup>
+              <col style="width: 140px" />
+              <col style="width: 140px" />
+              <col style="width: 140px" />
+              <col style="width: 140px" />
+              <col style="width: 140px" />
+              <col style="width: 140px" />
+            </colgroup>
 
-              <div class="searchColumn">
-                <span class="searchLabel">진행상태</span>
-                <BaseSelect initialSelectValue="전체" :options="selectList" />
-              </div>
-
-              <BaseButton label="검색" styleClassName="md bgGray" />
+            <tbody>
+              <tr>
+                <th scope="row" class="text-center" colspan="2">본부검수 결과</th>
+                <th scope="row" class="text-center" colspan="2">건수 차트</th>
+                <th scope="row" class="text-center" colspan="2">기준수량 차트</th>
+              </tr>
+              <tr>
+                <th scope="row" class="text-center bg-sky">전체건수</th>
+                <td class="text-right bg-wt">
+                  2,387 건
+                </td>
+                <th scope="row" class="text-center bg-wt" colspan="2" rowspan="6"></th>
+                <th scope="row" class="text-center bg-wt" colspan="2" rowspan="6"></th>
+              </tr>
+              <tr>
+                <th scope="row" class="text-center bg-sky">전체수량</th>
+                <td class="text-right bg-wt">
+                  15,801 건
+                </td>
+              </tr>
+              <tr>
+                <th scope="row" class="text-center bg-sky">성과(건수)</th>
+                <td class="text-right bg-wt">
+                  2,387 건
+                </td>
+              </tr>
+              <tr>
+                <th scope="row" class="text-center bg-sky">성과(수량)</th>
+                <td class="text-right bg-wt">
+                  15,801 건
+                </td>
+              </tr>
+              <tr>
+                <th scope="row" class="text-center bg-sky">오류건수</th>
+                <td class="text-right bg-wt">
+                  57 건
+                </td>
+              </tr>
+              <tr>
+                <th scope="row" class="text-center bg-sky">오류객체건수</th>
+                <td class="text-right bg-wt">
+                  724 건
+                </td>
+              </tr>
+            </tbody>
+          </BaseTable>
+        </section>
+      <section class="sectionContainer col">
+          <div class="sectionTitleGroup">
+            <div class="sectionDescriptionArea">
+              <p class="sectionDescription">본수검수 목록을 조회합니다.</p>
             </div>
-            <!-- //searchColumnRow -->
           </div>
-          <!-- //searchColumnRowContainer -->
-        </div>
-        <!-- sectionContainer -->
-        <section class="sectionContainer col">
+          <div class="searchArea">
+            <!-- searchColumnRowContainer -->
+            <div class="searchColumnRowContainer">
+              <!-- searchColumnRow -->
+              <div class="searchColumnRow">
+                <div class="searchColumn">
+                  <span class="searchLabel">데이터명</span>
+                  <BaseInput inputType="text" inputValue="" />
+                </div>
+                <div class="searchColumn">
+                  <span class="searchLabel">검수자</span>
+                  <BaseInput inputType="text" inputValue="" />
+                </div>
+                <div class="searchColumn">
+                  <span class="searchLabel">검수자</span>
+                  <BaseInput inputType="text" inputValue="" />
+                </div>
+              </div>
+              <!-- //searchColumnRow -->
+              <!-- searchColumnRow -->
+              <div class="searchColumnRow" style="padding-right: 119px">
+                <div class="searchColumn">
+                  <span class="searchLabel">시군구</span>
+                  <BaseSelect initialSelectValue="전체" :options="selectList" />
+                  <BaseSelect initialSelectValue="전체" :options="selectList" />
+                  <BaseSelect initialSelectValue="선택" :options="selectList" />
+                  <BaseCheckbox id="check1" :isLabel="true" label="(구)" />
+                </div>
+  
+                <div class="searchColumn">
+                  <span class="searchLabel">진행상태</span>
+                  <BaseSelect initialSelectValue="전체" :options="selectList" />
+                </div>
+  
+                <BaseButton label="검색" styleClassName="md bgGray" />
+              </div>
+              <!-- //searchColumnRow -->
+            </div>
+            <!-- //searchColumnRowContainer -->
+          </div>
+      </section>
+      <!-- sectionContainer -->
+      <section class="sectionContainer col">
           <div class="sectionBox">
             <div class="sectionTitleGroup">
               <h3 class="sectionTitle">본사검수대상 정보</h3>
@@ -409,9 +526,9 @@
                   <td class="text-center">7</td>
                   <td class="text-center">관리자</td>
                   <td class="text-center">완료</td>
-                  <td class="text-center">팝업아이콘</td>
-                  <td class="text-center">팝업아이콘</td>
-                  <td class="text-center">파일등록아이콘</td>
+                  <td class="text-center"><i class="ico fill-location"></i></td>
+                  <td class="text-center"></td>
+                  <td class="text-center"></td>
                 </tr>
                 <tr>
                   <td class="text-center">10</td>
@@ -420,9 +537,9 @@
                   <td class="text-center">7</td>
                   <td class="text-center">관리자</td>
                   <td class="text-center">완료</td>
-                  <td class="text-center">팝업아이콘</td>
-                  <td class="text-center">팝업아이콘</td>
-                  <td class="text-center">파일등록아이콘</td>
+                  <td class="text-center"><i class="ico fill-location"></i></td>
+                  <td class="text-center"><i class="ico fill-location"></i></td>
+                  <td class="text-center"><i class="ico fill-file"></i></td>
                 </tr>
                 <tr>
                   <td class="text-center">9</td>
@@ -431,9 +548,9 @@
                   <td class="text-center">7</td>
                   <td class="text-center">관리자</td>
                   <td class="text-center">완료</td>
-                  <td class="text-center">팝업아이콘</td>
-                  <td class="text-center">팝업아이콘</td>
-                  <td class="text-center">파일등록아이콘</td>
+                  <td class="text-center"><i class="ico fill-location"></i></td>
+                  <td class="text-center"><i class="ico fill-location"></i></td>
+                  <td class="text-center"><i class="ico fill-location"></i></td>
                 </tr>
                 <tr>
                   <td class="text-center">8</td>
@@ -442,9 +559,9 @@
                   <td class="text-center">7</td>
                   <td class="text-center">관리자</td>
                   <td class="text-center">완료</td>
-                  <td class="text-center">팝업아이콘</td>
-                  <td class="text-center">팝업아이콘</td>
-                  <td class="text-center">파일등록아이콘</td>
+                  <td class="text-center"></td>
+                  <td class="text-center"></td>
+                  <td class="text-center"></td>
                 </tr>
               </tbody>
             </BaseTable>
@@ -464,43 +581,108 @@
       </BaseTabContent>
 
       <BaseTabContent :current="current1" name="완료">
-        <div class="sectionTitleGroup">
-          <div class="sectionDescriptionArea">
-            <p class="sectionDescription">검수결과 목록을 조회합니다.</p>
+        <section class="sectionContainer w-50">
+          <div class="sectionBox">
+            
           </div>
-        </div>
-        <div class="searchArea">
-          <div class="searchColumnRowContainer">
-            <div class="searchColumnRow">
-              <div class="searchColumn">
-                <span class="searchLabel">데이터명</span>
-                <div class="searchColumnInputBox">
-                  <div class="baseTextFieldWrapper">
-                    <input
-                      type="text"
-                      class="baseTextField baseInput"
-                      value=""
-                      style="max-width: 180px"
-                    />
+          <div class="sectionBox">
+            <BaseTable styleClassName="rowType type2">
+            <colgroup>
+              <col style="width: 140px" />
+              <col style="width: 140px" />
+              <col style="width: 140px" />
+              <col style="width: 140px" />
+            </colgroup>
+
+            <tbody>
+              <tr>
+                <th scope="row" class="text-center" colspan="2">본부검수 결과</th>
+                <th scope="row" class="text-center" colspan="2">건수 차트</th>
+              </tr>
+              <tr>
+                <th scope="row" class="text-center bg-sky">전체건수</th>
+                <td class="text-right bg-wt">
+                  2,387 건
+                </td>
+                <th scope="row" class="text-center bg-sky">전체건수</th>
+                <td class="text-right bg-wt">
+                  1,784 건
+                </td>
+              </tr>
+              <tr>
+                <th scope="row" class="text-center bg-sky">전체수량</th>
+                <td class="text-right bg-wt">
+                  15,801 건
+                </td>
+                <th scope="row" class="text-center bg-sky">전체수량</th>
+                <td class="text-right bg-wt">
+                  11,685 건
+                </td>
+              </tr>
+              <tr>
+                <th scope="row" class="text-center bg-sky">성과(건수)</th>
+                <td class="text-right bg-wt">
+                  2,387 건
+                </td>
+                <th scope="row" class="text-center bg-sky">성과(건수)</th>
+                <td class="text-right bg-wt">
+                  1,784 건
+                </td>
+              </tr>
+              <tr>
+                <th scope="row" class="text-center bg-sky">성과(수량)</th>
+                <td class="text-right bg-wt">
+                  15,801 건
+                </td>
+                <th scope="row" class="text-center bg-sky">성과(수량)</th>
+                <td class="text-right bg-wt">
+                  11,685 건
+                </td>
+              </tr>
+            </tbody>
+          </BaseTable>
+          </div>
+        </section>
+        
+        <section class="sectionContainer col">
+          <div class="sectionTitleGroup">
+            <div class="sectionDescriptionArea">
+              <p class="sectionDescription">검수결과 목록을 조회합니다.</p>
+            </div>
+          </div>
+          <div class="searchArea">
+            <div class="searchColumnRowContainer">
+              <div class="searchColumnRow">
+                <div class="searchColumn">
+                  <span class="searchLabel">데이터명</span>
+                  <div class="searchColumnInputBox">
+                    <div class="baseTextFieldWrapper">
+                      <input
+                        type="text"
+                        class="baseTextField baseInput"
+                        value=""
+                        style="max-width: 180px"
+                      />
+                    </div>
                   </div>
                 </div>
+                <div class="searchColumn">
+                  <span class="searchLabel">본부검수대상</span>
+                  <BaseCheckbox id="check2" />
+                </div>
+                <div class="searchColumn">
+                  <span class="searchLabel">본사 검수대상</span>
+                  <BaseCheckbox id="check3" />
+                </div>
+                <button type="button" class="baseButton md bgGray">
+                  <span>조회</span>
+                </button>
               </div>
-              <div class="searchColumn">
-                <span class="searchLabel">본부검수대상</span>
-                <BaseCheckbox id="check2" />
-              </div>
-              <div class="searchColumn">
-                <span class="searchLabel">본사 검수대상</span>
-                <BaseCheckbox id="check3" />
-              </div>
-              <button type="button" class="baseButton md bgGray">
-                <span>조회</span>
-              </button>
+              <!-- //searchColumnRow -->
             </div>
-            <!-- //searchColumnRow -->
+            <!-- //searchColumnRowContainer -->
           </div>
-          <!-- //searchColumnRowContainer -->
-        </div>
+        </section>
 
         <!-- sectionContainer -->
         <section class="sectionContainer col">
@@ -524,10 +706,10 @@
                     <span>순번</span>
                   </th>
                   <th scope="col" class="text-center">데이터명</th>
-                  <th scope="col" class="text-center">시군구명</th>
+                  <th scope="col" class="text-center">소재지</th>
                   <th scope="col" class="text-center">기준수량</th>
-                  <th scope="col" class="text-center">검수자</th>
-                  <th scope="col" class="text-center">검수상태</th>
+                  <th scope="col" class="text-center">본부검수결과</th>
+                  <th scope="col" class="text-center">본부검수의견서</th>
                   <th scope="col" class="text-center">본사검수결과</th>
                   <th scope="col" class="text-center">본사검수의견서</th>
                 </tr>
@@ -538,50 +720,50 @@
                   <td class="text-center">토평교</td>
                   <td class="text-center">제주특별자치도 제주시</td>
                   <td class="text-center">7</td>
-                  <td class="text-center">관리자</td>
-                  <td class="text-center">완료</td>
-                  <td class="text-center">팝업아이콘</td>
-                  <td class="text-center">팝업아이콘</td>
+                  <td class="text-center"><i class="ico fill-location"></i></td>
+                  <td class="text-center"><i class="ico fill-location"></i></td>
+                  <td class="text-center"><i class="ico fill-location"></i></td>
+                  <td class="text-center"><i class="ico fill-location"></i></td>
                 </tr>
                 <tr>
                   <td class="text-center">10</td>
                   <td class="text-center">토평교</td>
                   <td class="text-center">제주특별자치도 제주시</td>
                   <td class="text-center">7</td>
-                  <td class="text-center">관리자</td>
-                  <td class="text-center">완료</td>
-                  <td class="text-center">팝업아이콘</td>
-                  <td class="text-center">팝업아이콘</td>
+                  <td class="text-center"><i class="ico fill-location"></i></td>
+                  <td class="text-center"><i class="ico fill-location"></i></td>
+                  <td class="text-center"></td>
+                  <td class="text-center"></td>
                 </tr>
                 <tr>
                   <td class="text-center">9</td>
                   <td class="text-center">토평교</td>
                   <td class="text-center">제주특별자치도 제주시</td>
                   <td class="text-center">7</td>
-                  <td class="text-center">관리자</td>
-                  <td class="text-center">완료</td>
-                  <td class="text-center">팝업아이콘</td>
-                  <td class="text-center">팝업아이콘</td>
+                  <td class="text-center"></td>
+                  <td class="text-center"></td>
+                  <td class="text-center"></td>
+                  <td class="text-center"></td>
                 </tr>
                 <tr>
                   <td class="text-center">8</td>
                   <td class="text-center">토평교</td>
                   <td class="text-center">제주특별자치도 제주시</td>
                   <td class="text-center">7</td>
-                  <td class="text-center">관리자</td>
-                  <td class="text-center">완료</td>
-                  <td class="text-center">팝업아이콘</td>
-                  <td class="text-center">팝업아이콘</td>
+                  <td class="text-center"></td>
+                  <td class="text-center"></td>
+                  <td class="text-center"><i class="ico fill-location"></i></td>
+                  <td class="text-center"><i class="ico fill-location"></i></td>
                 </tr>
                 <tr>
                   <td class="text-center">8</td>
                   <td class="text-center">토평교</td>
                   <td class="text-center">제주특별자치도 제주시</td>
                   <td class="text-center">7</td>
-                  <td class="text-center">관리자</td>
-                  <td class="text-center">완료</td>
-                  <td class="text-center">팝업아이콘</td>
-                  <td class="text-center">팝업아이콘</td>
+                  <td class="text-center"><i class="ico fill-location"></i></td>
+                  <td class="text-center"></td>
+                  <td class="text-center"><i class="ico fill-location"></i></td>
+                  <td class="text-center"></td>
                 </tr>
               </tbody>
             </BaseTable>

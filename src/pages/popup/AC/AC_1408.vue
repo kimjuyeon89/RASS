@@ -7,7 +7,7 @@
     />
 
     <PopupSectionBody>
-      <section class="popupSection">
+      <section class="popupSection" >
     
         <div class="popupSectonDescArea">
               <p class="popupSectionDescText"></p>
@@ -55,7 +55,7 @@
           <section class="sectionBox">
             
             <BaseTable
-            
+            styleClassName="overflow-y" inlineStyle="max-height: 200px"
             >
               <colgroup>
                 <col style="width: 70px" />

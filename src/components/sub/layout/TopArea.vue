@@ -924,7 +924,14 @@ const routeCondition = (id, category) => {
     return {
       title: '육안검수 검수상세조회(검수사업명)',
       prev: null,
-      // desc: '등록된 검수대상 목록의 통계를 조회합니다.',
+      desc: '등록된 검수대상 목록의 통계를 조회합니다.',
+    }
+  }
+  if (id === '1407') {
+    return {
+      title: '육안검수 검수서식 관리',
+      prev: null,
+      desc: '육안검수 검수서식 정보를 관리합니다.',
     }
   }
 

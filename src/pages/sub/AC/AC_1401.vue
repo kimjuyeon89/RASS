@@ -57,7 +57,7 @@
           </div>
 
           <div class="searchColumn">
-            <span class="searchLabel">진행상태</span>
+            <span class="searchLabel">데이터유형</span>
             <BaseSelect initialSelectValue="전체" :options="selectList" />
           </div>
 

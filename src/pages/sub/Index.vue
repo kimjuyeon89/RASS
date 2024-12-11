@@ -178,6 +178,9 @@
     <AC_1402
       v-else-if="$route.params.id === '1402' && $route.params.category === 'ac'"
     />
+    <AC_1407
+      v-else-if="$route.params.id === '1407' && $route.params.category === 'ac'"
+    />
 
     <Temp1 v-else-if="$route.params.id === 'temp1'" />
   </div>
@@ -247,6 +250,7 @@ import PM_111 from '@/pages/sub/PM/PM_111.vue'
 
 import AC_1401 from '@/pages/sub/AC/AC_1401.vue'
 import AC_1402 from '@/pages/sub/AC/AC_1402.vue'
+import AC_1407 from '@/pages/sub/AC/AC_1407.vue'
 
 import Temp1 from '@/pages/sub/temp/Temp1.vue'
 
