@@ -1,0 +1,159 @@
+.menuBoxWrapper {
+  margin-top: 50px;
+  width: 100%;
+}
+
+.menuBoxInner {
+  padding: 20px 24px;
+  border-radius: 16px;
+  background-color: var(--background-blue2);
+}
+
+.menuBoxList {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 28px;
+  padding: 0;
+  margin: 0;
+}
+
+.menuBoxItem {
+  position: relative;
+  width: calc(100% / 6 - 24px);
+  height: 50px;
+  display: flex;
+  align-items: center;
+  border-radius: 100px;
+  background-color: var(--background-white1);
+  border: 1px solid transparent;
+  transition: var(--transition);
+  z-index: 10;
+
+  .menuLinkNextElement {
+    margin-right: 10px;
+  }
+
+  &::before {
+    content: '';
+    width: 50px;
+    height: 50px;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    left: 0;
+    border-radius: 50%;
+    background-repeat: no-repeat;
+    background-position: center;
+    z-index: -1;
+  }
+
+  &.purple::before {
+    background-color: #a663fd;
+  }
+
+  &.blue::before {
+    background-color: #5f80ff;
+  }
+
+  &.blue2::before {
+    background-color: #4898e8;
+  }
+
+  &.mint::before {
+    background-color: #00a1c9;
+  }
+
+  &.green::before {
+    background-color: #94cf48;
+  }
+
+  &.red::before {
+    background-color: #eb8d6f;
+  }
+
+  &.pinMap::before {
+    background-image: url('../../assets/menubox/ico-menubox01.svg');
+  }
+
+  &.satellite::before {
+    background-image: url('../../assets/menubox/ico-menubox02.svg');
+  }
+
+  &.pin::before {
+    background-image: url('../../assets/menubox/ico-menubox03.svg');
+  }
+
+  &.mapSearch::before {
+    background-image: url('../../assets/menubox/ico-menubox04.svg');
+  }
+
+  &.pinCheck::before {
+    background-image: url('../../assets/menubox/ico-menubox05.svg');
+  }
+
+  &.cube::before {
+    background-image: url('../../assets/menubox/ico-cube.svg');
+  }
+
+  &.road::before {
+    background-image: url('../../assets/menubox/ico-road.svg');
+  }
+
+  &.government::before {
+    background-image: url('../../assets/menubox/ico-government.svg');
+  }
+
+  &.column::before {
+    background-image: url('../../assets/menubox/ico-column.svg');
+  }
+
+  &.loupe::before {
+    background-image: url('../../assets/menubox/ico-loupe.svg');
+  }
+
+  &.inMap::before {
+    background-image: url('../../assets/menubox/ico-in-map.svg');
+  }
+
+  &.setting::before {
+    background-image: url('../../assets/menubox/ico-setting.svg');
+  }
+}
+
+.menuBoxArrow {
+  margin-left: auto;
+}
+
+.menuBoxItemLink {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+  padding-left: calc(50px + 16px);
+  font-size: var(--fs18);
+  font-weight: var(--fw600);
+  color: var(--text-color-black2);
+  text-decoration: none;
+}
+
+@media (hover: hover) {
+  .menuBoxItem:hover {
+    border-color: #a5afc1;
+  }
+}
+
+@media screen and (max-width: 1600px) {
+  .menuBoxList {
+    gap: 10px;
+  }
+
+  .menuBoxItem {
+    width: calc(100% / 6 - 9px);
+  }
+
+  .menuBoxItemLink {
+    padding-left: 60px;
+    font-size: var(--fs16);
+  }
+}

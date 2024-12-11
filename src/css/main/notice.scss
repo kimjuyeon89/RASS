@@ -1,0 +1,134 @@
+.noticeWrapper {
+  margin-top: 50px;
+}
+
+.noticeHead {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: 12px;
+}
+
+.noticeHeadTitle {
+  font-size: 1.25rem;
+  font-weight: var(--fw700);
+  color: var(--text-color-black4);
+}
+
+.btnNoticeMore {
+  display: flex;
+  align-items: center;
+  height: 32px;
+  column-gap: 5px;
+  font-size: var(--fs15);
+  font-weight: var(--fw400);
+  color: var(--text-color-black4);
+  background-color: transparent;
+  transition: var(--transition-duration);
+}
+
+.noticeBody {
+  margin-top: 12px;
+}
+
+.noticeList {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 25px;
+  padding: 0;
+  margin: 0;
+}
+
+.noticeItem {
+  width: calc(100% / 4 - 19px);
+  height: 190px;
+  padding: 30px 24px;
+  border: 1px solid var(--border1);
+  border-radius: 12px;
+  background-color: var(--background-white1);
+  transition: var(--transition);
+  list-style: none;
+  word-break: keep-all;
+}
+
+.noticeLink {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  text-decoration: none;
+}
+
+.noticeTitle {
+  width: 100%;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  font-size: var(--fs16);
+  font-weight: var(--fw500);
+  color: var(--text-color-gray1);
+  transition: var(--transition);
+}
+
+.noticeUser {
+  width: fit-content;
+  display: flex;
+  align-items: center;
+  min-width: 110px;
+  height: 26px;
+  column-gap: 4px;
+  padding: 0 4px;
+  border-radius: 4px;
+  background-color: var(--background-gray2);
+}
+
+.noticeUserText {
+  display: flex;
+  align-items: center;
+  height: 100%;
+  font-size: var(--fs13);
+  font-weight: var(--fw500);
+  color: var(--text-color-black3);
+}
+
+.noticeDate {
+  font-size: var(--fs13);
+  font-weight: var(--fw400);
+  color: var(--text-color-gray1);
+}
+
+@media (hover: hover) {
+  .noticeItem:hover {
+    border-color: var(--primary1);
+    box-shadow: 4px 4px 8px rgba($color: #000000, $alpha: 0.2);
+
+    .noticeTitle {
+      color: var(--text-color-black4);
+      text-decoration: underline;
+      text-underline-offset: 3px;
+      text-decoration-thickness: 1px;
+    }
+  }
+
+  .btnNoticeMore:hover {
+    color: var(--primary2);
+    font-weight: var(--fw700);
+
+    .ico.plus {
+      background: url('../../assets/notice/ico-plus-hover.svg') no-repeat center;
+    }
+  }
+}
+
+@media screen and (max-width: 1600px) {
+  .noticeItem {
+    width: calc(100% / 3 - 19px);
+
+    &:nth-child(n + 4) {
+      display: none;
+    }
+  }
+}

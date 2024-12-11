@@ -1,0 +1,359 @@
+/* /components 페이지에서만 */
+.groupContentBox {
+  .paginationArea {
+    margin-top: 0;
+  }
+}
+/* --- */
+
+.pagingContainer {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  column-gap: 30px;
+  // margin-top: 30px;
+
+  + .sectionInnerContainer {
+    margin-top: 25px;
+  }
+
+  + .popupSection {
+    margin-top: 15px;
+  }
+}
+
+.paginationRightButton {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  right: 0;
+}
+
+.paginationArea,
+.pageMoveArea {
+  display: flex;
+  align-items: center;
+}
+
+.paginationArrows {
+  display: flex;
+  align-items: center;
+}
+
+.pageMoveArea {
+  &.width-auto {
+    .baseInput {
+      max-width: none;
+    }
+  }
+}
+
+.paginationArea {
+  &.board {
+    column-gap: 0;
+
+    .btnPage {
+      width: 30px;
+      height: 30px;
+      font-size: var(--fs13);
+
+      &.active {
+        color: var(--text-color-blue1);
+        background-color: transparent;
+      }
+    }
+
+    .btnPrev,
+    .btnNext,
+    .btnFirst,
+    .btnNext {
+      min-width: 50px;
+      height: 30px;
+      font-size: var(--fs13);
+    }
+
+    .btnPrev {
+      &::before {
+        background-image: url('../../assets/pagination/ico-pagination-prev-sm.svg');
+      }
+    }
+
+    .btnNext {
+      &::after {
+        background-image: url('../../assets/pagination/ico-pagination-next-sm.svg');
+      }
+    }
+
+    .btnFirst {
+      &::before {
+        background-image: url('../../assets/pagination/ico-pagination-first.svg');
+      }
+    }
+
+    .btnNext {
+      &::after {
+        background-image: url('../../assets/pagination/ico-pagination-next.svg');
+      }
+    }
+
+    .paginationNumbers {
+      column-gap: 0;
+    }
+  }
+}
+
+.pageMoveInput {
+  display: flex;
+  align-items: center;
+  font-size: var(--fs14);
+  font-weight: var(--fw400);
+  color: var(--text-color-gray1);
+
+  .baseInput {
+    max-width: 77px; //숫자 1만 까지
+    width: auto;
+    margin-right: 8px;
+  }
+
+  + .pageMoveButton {
+    margin-left: 16px;
+  }
+}
+
+.pageMoveButton {
+  .baseButton {
+    min-width: 50px;
+    height: 36px;
+  }
+}
+
+.paginationNumbers {
+  display: flex;
+  align-items: center;
+  column-gap: 4px;
+
+  &.disabled {
+    .btnPage {
+      color: var(--text-color-gray5);
+      cursor: not-allowed;
+    }
+  }
+}
+
+.btnPage {
+  min-width: 40px;
+  min-height: 40px;
+  padding: 10px;
+  font-size: var(--fs14);
+  font-weight: var(--fw400);
+  color: var(--text-color-gray1);
+  border-radius: 6px;
+  // background-color: var(--background-white1);
+  transition: var(--transition);
+
+  &.active {
+    color: var(--text-color-white1);
+    font-weight: var(--fw700);
+    background-color: var(--background-blue5);
+  }
+}
+
+.btnPrev,
+.btnNext,
+.btnFirst,
+.btnLast {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 40px;
+  min-width: 57px;
+  border-radius: 6px;
+  background-color: transparent;
+  transition: var(--transition);
+  font-size: var(--fs14);
+  font-weight: var(--fw400);
+  color: var(--text-color-gray1);
+
+  &.disabled {
+    color: var(--text-color-gray5);
+  }
+}
+
+.btnPrev,
+.btnNext,
+.btnFirst,
+.btnLast {
+  position: relative;
+
+  span {
+    display: block;
+    min-width: 24.2px;
+  }
+
+  &::before,
+  &::after {
+    content: '';
+    width: 16px;
+    height: 16px;
+    background-repeat: no-repeat;
+    background-position: center;
+  }
+
+  &.disabled {
+    cursor: not-allowed;
+    user-select: none;
+  }
+}
+
+.btnFirst {
+  margin-right: 4px;
+
+  span {
+    margin-left: 3px;
+  }
+
+  &::before {
+    background-image: url('../../assets/pagination/ico-pagination-first.svg');
+  }
+
+  &::after {
+    display: none;
+  }
+
+  &.disabled::before {
+    background-image: url('../../assets/pagination/ico-pagination-first-disable.svg');
+  }
+
+  + .btnPrev {
+    margin-right: 4px;
+  }
+}
+
+.btnLast {
+  &::after {
+    background-image: url('../../assets/pagination/ico-pagination-last.svg');
+  }
+
+  &::before {
+    display: none;
+  }
+
+  &.disabled::before {
+    background-image: url('../../assets/pagination/ico-pagination-last-disable.svg');
+  }
+}
+
+.btnPrev {
+  &::before {
+    background-image: url('../../assets/pagination/ico-pagination-prev.svg');
+  }
+
+  &::after {
+    display: none;
+  }
+
+  &.disabled::before {
+    background-image: url('../../assets/pagination/ico-pagination-prev-disable.svg');
+  }
+}
+
+.btnNext {
+  margin-left: 4px;
+
+  &::after {
+    background-image: url('../../assets/pagination/ico-pagination-next.svg');
+  }
+
+  &::before {
+    display: none;
+  }
+
+  &.disabled::after {
+    background-image: url('../../assets/pagination/ico-pagination-next-disable.svg');
+  }
+
+  + .btnLast {
+    margin-left: 4px;
+  }
+}
+
+.pageResultWrapper {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  right: 0;
+  z-index: 100;
+  display: flex;
+  align-items: center;
+  column-gap: 20px;
+}
+
+.pageResultSelect {
+  width: 70px;
+  height: 40px;
+}
+
+.pageResultInfo {
+  display: flex;
+  align-items: center;
+  column-gap: 10px;
+}
+
+.pageResultInfoText {
+  font-size: var(--fs14);
+  font-weight: var(--fw400);
+  color: var(--text-color-gray21);
+
+  &.text-bold {
+    margin-left: 5px;
+  }
+}
+
+@media (hover: hover) {
+  .paginationArea:not(.disabled):not(.board) {
+    .btnPage:hover {
+      color: var(--text-color-white1);
+      font-weight: var(--fw700);
+      background-color: var(--background-blue5);
+    }
+
+    .btnPrev,
+    .btnNext,
+    .btnFirst,
+    .btnLast {
+      &:not(.disabled) {
+        &:hover {
+          color: var(--text-color-blue1);
+          font-weight: var(--fw700);
+          background-color: var(--background-blue4);
+        }
+      }
+    }
+  }
+
+  .btnPrev:not(.disabled):hover {
+    &::before {
+      background-image: url('../../assets/pagination/ico-pagination-prev-hover.svg');
+    }
+  }
+
+  .btnNext:not(.disabled):hover {
+    &::after {
+      background-image: url('../../assets/pagination/ico-pagination-next-hover.svg');
+    }
+  }
+
+  .btnFirst:not(.disabled):hover {
+    &::before {
+      background-image: url('../../assets/pagination/ico-pagination-first-hover.svg');
+    }
+  }
+
+  .btnLast:not(.disabled):hover {
+    &::after {
+      background-image: url('../../assets/pagination/ico-pagination-last-hover.svg');
+    }
+  }
+}

@@ -1,0 +1,95 @@
+.commentArea {
+  padding: 20px 30px;
+  border-radius: 12px;
+  background-color: var(--background-white2);
+
+  .baseTextarea {
+    flex: 1;
+    height: 100%;
+  }
+}
+
+.commentList {
+  display: flex;
+  flex-direction: column;
+  row-gap: 10px;
+}
+
+.commentItem {
+  width: 100%;
+}
+
+.commentRow {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.commentRowLeft,
+.commentRowRight {
+  display: flex;
+  align-items: center;
+  column-gap: 20px;
+}
+
+.commentText {
+  font-size: var(--fs14);
+  font-weight: var(--fw500);
+  color: var(--text-color-black4);
+  word-break: keep-all;
+  margin-right: 10px;
+}
+
+.commentUsername {
+  display: block;
+  font-size: var(--fs14);
+  font-weight: var(--fw500);
+  color: var(--text-color-black4);
+}
+
+.commentDate {
+  min-width: 109px;
+  font-size: var(--fs13);
+  font-weight: var(--fw400);
+  color: #868686;
+}
+
+.commentTop {
+  .pagingContainer {
+    margin: 10px 0;
+  }
+}
+
+.commentBottom {
+  padding-top: 20px;
+  border-top: 1px solid #ddd;
+}
+
+.commentBottomInner {
+  display: flex;
+  align-items: center;
+  column-gap: 12px;
+
+  .baseButton {
+    min-width: 76px;
+    height: 100%;
+    font-size: var(--fs15);
+  }
+
+  height: 80px;
+}
+
+.commentTable {
+  border-top: 0;
+  background: transparent;
+
+  table {
+    border-bottom: 0;
+
+    td {
+      border: 0;
+      padding: 0;
+      height: calc(30px + 10px); //기본 height 30px + 세로간격 10px
+    }
+  }
+}

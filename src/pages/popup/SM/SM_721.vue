@@ -1,0 +1,143 @@
+<template>
+  <Popup :maxWidth="860" :visible="popupVisible">
+    <SectionTitle
+      title="사용자 정보"
+      titleIcon="user"
+      @close="popupVisible = false"
+    />
+
+    <PopupSectionBody>
+      <BaseTable styleClassName="rowType" :caption="caption">
+        <colgroup>
+          <col style="width: 140px" />
+          <col style="width: 260px" />
+          <col style="width: 140px" />
+          <col style="width: 260px" />
+        </colgroup>
+        <tbody>
+          <tr>
+            <th scope="row" class="text-left">
+              <span class="required">아이디</span>
+            </th>
+            <td class="text-center">870001</td>
+            <th scope="row" class="text-left">
+              <span class="required">성명</span>
+            </th>
+            <td>
+              <BaseInput inputType="text" inputValue="김철수" />
+            </td>
+          </tr>
+          <tr>
+            <th scope="row" class="text-left">권한</th>
+            <td>
+              <BaseSelect
+                initialSelectValue="LX본부담당자"
+                :options="selectOption1"
+              />
+            </td>
+            <th scope="row" class="text-left">
+              <span class="required">계정 사용여부</span>
+            </th>
+            <td>
+              <div class="searchColumnInputBox">
+                <BaseRadio
+                  styleClassName="sm"
+                  name="r01"
+                  id="r01"
+                  label="사용"
+                  :checked="true"
+                />
+                <BaseRadio
+                  styleClassName="sm"
+                  name="r01"
+                  id="r02"
+                  label="미사용"
+                />
+              </div>
+            </td>
+          </tr>
+          <tr>
+            <th scope="row" class="text-left">상위 기관</th>
+            <td>
+              <BaseSelect
+                initialSelectValue="경기북부지사"
+                :options="selectOption1"
+              />
+            </td>
+            <th scope="row" class="text-left">하위 기관</th>
+            <td>
+              <BaseSelect
+                initialSelectValue="의정부지사"
+                :options="selectOption1"
+              />
+            </td>
+          </tr>
+          <tr>
+            <th scope="row" class="text-left">직급</th>
+            <td>
+              <BaseInput inputType="text" inputValue="지사장" />
+            </td>
+            <th scope="row" class="text-left">회사전화</th>
+            <td>
+              <BaseInput inputType="text" inputValue="03159451245" />
+            </td>
+          </tr>
+          <tr>
+            <th scope="row" class="text-left">결재권자</th>
+            <td>
+              <div class="searchColumnInputBox">
+                <BaseRadio
+                  styleClassName="sm"
+                  name="r02"
+                  id="r03"
+                  label="Y"
+                  :checked="true"
+                />
+                <BaseRadio styleClassName="sm" name="r02" id="r04" label="N" />
+              </div>
+            </td>
+            <th scope="row" class="text-left"></th>
+            <td></td>
+          </tr>
+        </tbody>
+      </BaseTable>
+
+      <BottomArea :both="true">
+        <template v-slot:left>
+          <BaseButton
+            label="사용자 비밀번호 초기화"
+            styleClassName="md pd-sm bdGray"
+          />
+        </template>
+        <template v-slot:right>
+          <BaseButton label="취소" styleClassName="md pd-sm bdGray" />
+          <BaseButton label="저장" styleClassName="md pd-sm bgBlue" />
+        </template>
+      </BottomArea>
+    </PopupSectionBody>
+  </Popup>
+</template>
+
+<script setup>
+import { ref } from 'vue'
+
+import BottomArea from '@/components/sub/section/BottomArea.vue'
+
+import PopupSectionBody from '@/components/popup/PopupSectionBody.vue'
+import Popup from '@/components/popup/Popup.vue'
+import SectionTitle from '@/components/popup/SectionTitle.vue'
+import BaseButton from '@/components/base/BaseButton.vue'
+import BaseInput from '@/components/base/BaseInput.vue'
+import BaseSelect from '@/components/base/BaseSelect.vue'
+import BaseRadio from '@/components/base/BaseRadio.vue'
+import BaseTable from '@/components/base/BaseTable.vue'
+
+const popupVisible = ref(true)
+
+const selectOption1 = ref(['옵션1', '옵션2', '옵션3', '옵션4'])
+
+const caption = {
+  name: '신규 사용자 등록',
+  cell: '아이디,성명,권한,계정 사용여부, 상위기관, 하위 기관, 직급, 회사전화, 결재권자',
+}
+</script>

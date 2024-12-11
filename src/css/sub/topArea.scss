@@ -1,0 +1,59 @@
+.topArea {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 22px;
+}
+
+.topRow {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  &.bottom {
+    margin: 10px 0;
+  }
+
+  &.noDesc {
+    justify-content: flex-end;
+  }
+}
+
+.topRowDesc {
+  font-size: var(--fs15);
+  font-weight: var(--fw500);
+  color: var(--text-color-black5);
+}
+
+.topRowButtonGroup {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.topTitle {
+  font-size: 1.75rem;
+  font-weight: var(--fw700);
+  color: var(--text-color-black2);
+}
+
+.baseTabContentGroup {
+  display: flex;
+  align-items: center;
+  margin-bottom: 15px;
+
+  &.between {
+    justify-content: space-between;
+  }
+
+  &.end {
+    justify-content: flex-end;
+  }
+}
+
+.baseTabContentButtonGroup {
+  display: flex;
+  align-items: center;
+  column-gap: 8px;
+}

@@ -1,0 +1,70 @@
+.breadCrumbWrapper {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+
+  + .topRow {
+    margin-top: 20px;
+  }
+}
+
+.breadCrumbList {
+  display: flex;
+  align-items: center;
+}
+
+.breadCrumbItemHome {
+  width: 20px;
+  height: 20px;
+  background: url('../../assets/icons/ico-home.svg') no-repeat center;
+
+  a {
+    display: flex;
+    width: 100%;
+    height: 100%;
+  }
+
+  + .breadCrumbItem {
+    &::before {
+      content: '';
+      margin: 0 10px;
+      width: 7px;
+      height: 12px;
+      background: url('../../assets/icons/ico-breadcrumb-arrow.svg') no-repeat
+        center;
+    }
+  }
+}
+
+.breadCrumbItem {
+  display: flex;
+  align-items: center;
+
+  &::after {
+    content: '';
+    margin: 0 10px;
+    width: 7px;
+    height: 12px;
+    background: url('../../assets/icons/ico-breadcrumb-arrow.svg') no-repeat
+      center;
+  }
+
+  &:last-of-type {
+    &::after {
+      display: none;
+    }
+  }
+
+  &.current {
+    .breadCrumbItemText {
+      color: var(--text-color-black2);
+      font-weight: var(--fw600);
+    }
+  }
+}
+
+.breadCrumbItemText {
+  font-size: var(--fs14);
+  font-weight: var(--fw400);
+  color: #676c78;
+}

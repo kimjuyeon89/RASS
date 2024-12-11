@@ -1,0 +1,361 @@
+.ico {
+  display: inline-flex;
+  transition: inherit;
+
+  &.side01 {
+    width: 20px;
+    height: 20px;
+    background: url('../../assets/sidebar/ico-side01.svg') no-repeat center;
+  }
+
+  &.side01-active {
+    width: 20px;
+    height: 20px;
+    background: url('../../assets/sidebar/ico-side01-active.svg') no-repeat
+      center;
+  }
+
+  &.side02 {
+    width: 20px;
+    height: 20px;
+    background: url('../../assets/sidebar/ico-side02.svg') no-repeat center;
+  }
+
+  &.side02-active {
+    width: 20px;
+    height: 20px;
+
+    background: url('../../assets/sidebar/ico-side02-active.svg') no-repeat
+      center;
+  }
+
+  &.side03 {
+    width: 20px;
+    height: 20px;
+
+    background: url('../../assets/sidebar/ico-side03.svg') no-repeat center;
+  }
+
+  &.side03-active {
+    width: 20px;
+    height: 20px;
+
+    background: url('../../assets/sidebar/ico-side03-active.svg') no-repeat
+      center;
+  }
+
+  &.side04 {
+    width: 20px;
+    height: 20px;
+
+    background: url('../../assets/sidebar/ico-side04.svg') no-repeat center;
+  }
+
+  &.side04-active {
+    width: 20px;
+    height: 20px;
+
+    background: url('../../assets/sidebar/ico-side04-active.svg') no-repeat
+      center;
+  }
+
+  &.twoDepthItemArrowDown {
+    width: 21px;
+    height: 21px;
+
+    background: url('../../assets/sidebar/ico-side-arrow.svg') no-repeat center;
+  }
+
+  &.search {
+    width: 18px;
+    height: 18px;
+
+    background: url('../../assets/icons/ico-search.svg') no-repeat center;
+  }
+
+  &.shortcut {
+    width: 18px;
+    height: 18px;
+    background: url('../../assets/card/ico-shortcut.svg') no-repeat center;
+  }
+
+  &.menuBoxArrow {
+    width: 26px;
+    height: 26px;
+    background: url('../../assets/menubox/ico-arrow-right.svg') no-repeat center;
+  }
+
+  &.plus {
+    width: 16px;
+    height: 16px;
+    background: url('../../assets/notice/ico-plus.svg') no-repeat center;
+  }
+
+  &.user {
+    width: 20px;
+    height: 20px;
+    background: url('../../assets/notice/ico-user.svg') no-repeat center;
+  }
+
+  &.tel {
+    width: 19px;
+    height: 20px;
+    background: url('../../assets/footer/ico-footer-tel.png') no-repeat center;
+  }
+
+  &.logout {
+    width: 18px;
+    height: 18px;
+    background: url('../../assets/header/ico-logout.svg') no-repeat center;
+  }
+
+  &.global {
+    width: 23px;
+    height: 22px;
+    background: url('../../assets/icons/ico-global.svg') no-repeat center;
+  }
+
+  &.setting {
+    width: 24px;
+    height: 24px;
+    background: url('../../assets/icons/ico-setting.svg') no-repeat center;
+  }
+
+  &.login-location {
+    width: 24px;
+    height: 24px;
+    background: url('../../assets/icons/ico-location.svg') no-repeat center;
+  }
+
+  &.selectDown {
+    width: 20px;
+    height: 20px;
+    background: url('../../assets/icons/ico-select-down.svg') no-repeat center;
+  }
+
+  &.selectDownDisable {
+    width: 20px;
+    height: 20px;
+    background: url('../../assets/icons/ico-select-down-disable.svg') no-repeat
+      center;
+  }
+
+  &.breadcrumbArrow {
+    width: 7px;
+    height: 12px;
+    background: url('../../assets/icons/ico-breadcrumb-arrow.svg') no-repeat
+      center;
+  }
+
+  &.statistics1 {
+    background: url('../../assets/statistics/ico-statistics01.svg') no-repeat
+      center;
+  }
+
+  &.statistics2 {
+    background: url('../../assets/statistics/ico-statistics02.svg') no-repeat
+      center;
+  }
+
+  &.statistics3 {
+    background: url('../../assets/statistics/ico-statistics03.svg') no-repeat
+      center;
+  }
+
+  &.statistics4 {
+    background: url('../../assets/statistics/ico-statistics04.svg') no-repeat
+      center;
+  }
+
+  &.statistics5 {
+    background: url('../../assets/statistics/ico-statistics05.svg') no-repeat
+      center;
+  }
+
+  &.statistics6 {
+    background: url('../../assets/statistics/ico-statistics06.svg') no-repeat
+      center;
+  }
+
+  &.statistics7 {
+    background: url('../../assets/statistics/ico-statistics07.svg') no-repeat
+      center;
+  }
+
+  &.statistics8 {
+    background: url('../../assets/statistics/ico-statistics08.svg') no-repeat
+      center;
+  }
+
+  &.statistics9 {
+    background: url('../../assets/statistics/ico-statistics09.svg') no-repeat
+      center;
+  }
+
+  &.statistics10 {
+    background: url('../../assets/statistics/ico-statistics10.svg') no-repeat
+      center;
+  }
+
+  &[class*='statistics'] {
+    width: 100%;
+    height: 100%;
+  }
+
+  &.building {
+    width: 16px;
+    height: 16px;
+    background: url('../../assets/popup/ico-building.svg') no-repeat center;
+  }
+
+  &.business-and-trade {
+    width: 16px;
+    height: 16px;
+    background: url('../../assets/popup/ico-business-and-trade.svg') no-repeat
+      center;
+  }
+
+  &.object-address {
+    width: 16px;
+    height: 16px;
+    background: url('../../assets/popup/ico-object-address.svg') no-repeat
+      center;
+  }
+
+  &.dimensions {
+    width: 16px;
+    height: 16px;
+    background: url('../../assets/popup/ico-dimensions.svg') no-repeat center;
+  }
+
+  &.maintenance {
+    width: 16px;
+    height: 16px;
+    background: url('../../assets/popup/ico-maintenance.svg') no-repeat center;
+  }
+
+  &.location {
+    width: 16px;
+    height: 16px;
+    background: url('../../assets/popup/ico-location.svg') no-repeat center;
+  }
+
+  &.satellite {
+    width: 16px;
+    height: 16px;
+    background: url('../../assets/popup/ico-satellite.svg') no-repeat center;
+  }
+
+  &.building-title {
+    width: 26px;
+    height: 26px;
+    background: url('../../assets/popup/ico-building-title.svg') no-repeat
+      center;
+  }
+
+  &.business-and-trade {
+    width: 16px;
+    height: 16px;
+    background: url('../../assets/popup/ico-business-and-trade.svg') no-repeat
+      center;
+  }
+
+  &.maintenance {
+    width: 16px;
+    height: 16px;
+    background: url('../../assets/popup/ico-maintenance.svg') no-repeat center;
+  }
+
+  &.road {
+    width: 16px;
+    height: 16px;
+    background: url('../../assets/popup/ico-road.svg') no-repeat center;
+  }
+
+  &.dimensions {
+    width: 16px;
+    height: 16px;
+    background: url('../../assets/popup/ico-dimensions.svg') no-repeat center;
+  }
+
+  &.location {
+    width: 16px;
+    height: 16px;
+    background: url('../../assets/popup/ico-location.svg') no-repeat center;
+  }
+
+  &.object-address {
+    width: 16px;
+    height: 16px;
+    background: url('../../assets/popup/ico-object-address.svg') no-repeat
+      center;
+  }
+
+  &.popup-building {
+    width: 16px;
+    height: 16px;
+    background: url('../../assets/popup/ico-building.svg') no-repeat center;
+  }
+
+  &.satellite {
+    width: 16px;
+    height: 16px;
+    background: url('../../assets/popup/ico-satellite.svg') no-repeat center;
+  }
+
+  &.folder {
+    width: 18px;
+    height: 18px;
+    background: url('../../assets/accordion/ico-folder.svg') no-repeat center;
+  }
+
+  &.list-check {
+    width: 18px;
+    height: 18px;
+    background: url('../../assets/accordion/ico-list-check.svg') no-repeat
+      center;
+  }
+
+  &.code {
+    width: 18px;
+    height: 18px;
+    background: url('../../assets/accordion/ico-code.svg') no-repeat center;
+  }
+
+  &.set {
+    width: 18px;
+    height: 18px;
+    background: url('../../assets/accordion/ico-set.svg') no-repeat center;
+  }
+
+  &.inputCalendar {
+    width: 24px;
+    height: 24px;
+    background: url('../../assets/popup/ico-calendar02.svg') no-repeat center;
+  }
+
+  &.fill-file {
+    width: 28px;
+    height: 28px;
+    background: url('../../assets/icons/ico-table-file.svg') no-repeat center;
+  }
+
+  &.fill-location {
+    width: 28px;
+    height: 28px;
+    background: url('../../assets/icons/ico-table-pin.svg') no-repeat center;
+  }
+
+  &.fill-internet {
+    width: 28px;
+    height: 28px;
+    background: url('../../assets/icons/ico-table-internet.svg') no-repeat
+      center;
+  }
+
+  &.change-arrow {
+    width: 36px;
+    height: 36px;
+    background: url('../../assets/icons/ico-arrow-right.svg') no-repeat center;
+  }
+}

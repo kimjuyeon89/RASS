@@ -1,0 +1,623 @@
+.baseButton {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 50px;
+  height: 36px;
+  padding: 0 12px;
+  font-size: var(--fs14);
+  font-weight: var(--fw400);
+  border-radius: 6px;
+  transition: var(--transition);
+  border: 1px solid transparent;
+
+  label {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+  }
+
+  //q-sm2
+  &.sm {
+    min-width: 40px;
+    height: 30px;
+    padding: 0;
+    border-radius: 4px;
+    font-size: var(--fs13);
+  }
+
+  //q-md
+  &.md {
+    min-width: 70px;
+    padding: 0 22px;
+
+    &.pd-sm {
+      padding: 0 10.5px;
+    }
+  }
+
+  // wide
+  &.wide {
+    min-width: 160px;
+  }
+
+  /* border */
+  &.bdGray {
+    border: 1px solid var(--border-gray1);
+    color: var(--text-color-black2);
+    background-color: var(--background-white1);
+  }
+
+  &.bdBlue {
+    border: 1px solid var(--border-blue1);
+    color: var(--text-color-blue1);
+    background-color: var(--background-white1);
+  }
+
+  /* background */
+  &.bgBlue {
+    color: var(--text-color-white1);
+    background-color: var(--background-blue5);
+  }
+
+  &.bgAqua {
+    color: var(--text-color-white1);
+    background-color: var(--background-aqua1);
+  }
+
+  &.bgGray {
+    color: var(--text-color-white1);
+    background-color: var(--background-gray3);
+  }
+
+  &.mixBlue {
+    color: var(--text-color-blue3);
+    border: 1px solid var(--border-blue3);
+    background-color: var(--background-blue7);
+  }
+
+  &.bgRed {
+    color: var(--text-color-white1);
+    font-weight: var(--fw700);
+    background-color: #f14b59;
+  }
+
+  &.bgGreen {
+    color: var(--text-color-white1);
+    font-weight: var(--fw700);
+    background-color: #37a882;
+  }
+
+  /* icon */
+  &[class*='i-'] {
+    &::before {
+      content: '';
+      margin-right: 4px;
+      width: 18px;
+      height: 18px;
+      background-repeat: no-repeat;
+      background-position: center;
+      transition: var(--transition);
+    }
+  }
+
+  &.i-excel {
+    &::before {
+      background-image: url('../../assets/button/ico-excel.svg');
+    }
+  }
+
+  &.i-excel-green {
+    &::before {
+      background-image: url('../../assets/button/ico-excel-green.svg');
+    }
+  }
+
+  &.i-close {
+    &::before {
+      background-image: url('../../assets/icons/ico-close.svg');
+    }
+  }
+
+  &.i-remove {
+    &::before {
+      width: 16px;
+      height: 16px;
+      background-image: url('../../assets/button/ico-x-red.svg');
+    }
+  }
+
+  &.i-search {
+    &::before {
+      width: 16px;
+      height: 16px;
+      background-image: url('../../assets/button/ico-search.svg');
+    }
+  }
+
+  &.i-plus-blue {
+    &::before {
+      width: 16px;
+      height: 16px;
+      background-image: url('../../assets/button/ico-plus-blue.svg');
+    }
+  }
+
+  &.i-download {
+    &::before {
+      width: 16px;
+      height: 16px;
+      background-image: url('../../assets/button/ico-download-blue.svg');
+    }
+  }
+
+  &.i-download-gray {
+    &::before {
+      width: 16px;
+      height: 16px;
+      background-image: url('../../assets/button/ico-download.svg');
+    }
+  }
+
+  &.i-download-white {
+    &::before {
+      width: 16px;
+      height: 16px;
+      background-image: url('../../assets/button/ico-download-white.svg');
+    }
+  }
+
+  &.i-upload {
+    &::before {
+      width: 16px;
+      height: 16px;
+      background-image: url('../../assets/button/ico-upload-blue.svg');
+    }
+  }
+
+  &.i-refresh {
+    &::before {
+      width: 20px;
+      height: 20px;
+      background-image: url('../../assets/button/ico-refresh.svg');
+    }
+  }
+
+  &.i-gis-check {
+    &::before {
+      width: 18px;
+      height: 18px;
+      background-image: url('../../assets/gis/ico-check-circle.svg');
+    }
+  }
+
+  &.i-gis-rotate {
+    &::before {
+      width: 18px;
+      height: 18px;
+      background-image: url('../../assets/gis/ico-rotate.svg');
+    }
+  }
+
+  &.i-gis-layer {
+    &::before {
+      width: 18px;
+      height: 18px;
+      background-image: url('../../assets/gis/ico-layers.svg');
+    }
+  }
+
+  &.i-gis-map-marker {
+    &::before {
+      width: 18px;
+      height: 18px;
+      background-image: url('../../assets/gis/ico-map-marker.svg');
+    }
+  }
+
+  &.i-gis-search {
+    &::before {
+      width: 18px;
+      height: 18px;
+      background-image: url('../../assets/gis/ico-search.svg');
+    }
+  }
+
+  &.i-gis-zoom-in {
+    &::before {
+      background-image: url('../../assets/gis/ico-tool-zoom-in.svg');
+    }
+  }
+
+  &.i-gis-zoom-out {
+    &::before {
+      background-image: url('../../assets/gis/ico-tool-zoom-out.svg');
+    }
+  }
+
+  &.i-gis-area {
+    &::before {
+      background-image: url('../../assets/gis/ico-tool-area.svg');
+    }
+  }
+
+  &.i-gis-ruler {
+    &::before {
+      background-image: url('../../assets/gis/ico-tool-ruler.svg');
+    }
+  }
+
+  &.i-gis-reset {
+    &::before {
+      background-image: url('../../assets/gis/ico-tool-reset.svg');
+    }
+  }
+
+  &.i-gis-yellow-pin {
+    &::before {
+      background-image: url('../../assets/gis/ico-yellow-pin.svg');
+    }
+  }
+
+  &.i-gis-grid {
+    &::before {
+      background-image: url('../../assets/gis/ico-grid.svg');
+    }
+  }
+
+  &.i-gis-label {
+    &::before {
+      background-image: url('../../assets/gis/ico-label.svg');
+    }
+  }
+
+  &.i-gis-red-pin {
+    &::before {
+      background-image: url('../../assets/gis/ico-red-pin.svg');
+    }
+  }
+
+  &.i-gis-location {
+    &.ative {
+      border-color: #ff5a5a;
+      color: #ff5a5a;
+    }
+
+    &::before {
+      background-image: url('../../assets/gis/ico-location.svg');
+    }
+  }
+
+  &.i-gis-mountain {
+    &.active {
+      border-color: #76de50;
+      color: #76de50;
+    }
+
+    &::before {
+      background-image: url('../../assets/gis/ico-mountain.svg');
+    }
+  }
+
+  &.i-gis-information {
+    &.active {
+      border-color: #40c7f5;
+      color: #40c7f5;
+    }
+
+    &::before {
+      background-image: url('../../assets/gis/ico-information.svg');
+    }
+  }
+
+  &.i-gis-map {
+    &.active {
+      border-color: #ffb412;
+      color: #ffb412;
+    }
+    &::before {
+      background-image: url('../../assets/gis/ico-map.svg');
+    }
+  }
+
+  &.i-gis-airplane {
+    &.active {
+      border-color: #e291ff;
+      color: #e291ff;
+    }
+
+    &::before {
+      background-image: url('../../assets/gis/ico-airplane.svg');
+    }
+  }
+
+  &.i-gis-green-square {
+    &::after {
+      content: '';
+      display: flex;
+      position: absolute;
+      top: 16px;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 20px;
+      height: 8px;
+      background-color: #3ecb95;
+    }
+  }
+
+  &.i-gis-red-square {
+    &::after {
+      content: '';
+      display: flex;
+      position: absolute;
+      top: 16px;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 20px;
+      height: 8px;
+      background-color: #ec5050;
+    }
+  }
+}
+
+.btnRemove {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 36px;
+  height: 36px;
+  padding: 0;
+  border-radius: 6px;
+  background: var(--background-gray3)
+    url('../../assets/icons/ico-remove-white.svg') no-repeat center;
+}
+
+.btnCardSetting {
+  width: 32px;
+  height: 32px;
+  border-radius: 6px;
+  border: 1px solid var(--border1);
+  background: var(--background-white1) url('../../assets/card/ico-setting.svg')
+    no-repeat center;
+  transition: var(--transition);
+}
+
+.btnCardSettingSave {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 50px;
+  height: 32px;
+  border-radius: 6px;
+  border: 1px solid #c8cad3;
+  font-size: var(--fs14);
+  font-weight: var(--fw600);
+  color: #758299;
+  background-color: var(--background-white1);
+  transition: var(--transition);
+}
+
+.btnCardItemButton {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  background-color: #bfcadf;
+  background-repeat: no-repeat;
+  background-position: center;
+  transition: var(--transition);
+}
+
+.btnCardItemAdd {
+  min-width: 31px;
+  min-height: 31px;
+  background-image: url('../../assets/card/ico-setting-add-plus.svg');
+  background-size: 15px;
+}
+
+.btnCardItemRemove {
+  width: 40px;
+  height: 40px;
+  background-image: url('../../assets/card/ico-setting-remove-minus.svg');
+}
+
+.btnLogin {
+  width: 100%;
+  height: 60px;
+  border-radius: 10px;
+  font-size: var(--fs18);
+  font-weight: var(--fw700);
+  color: var(--text-color-white1);
+  background-color: #26308c;
+}
+
+.btnCalendar {
+  width: 24px;
+  height: 24px;
+  pointer-events: none;
+  background: url('../../assets/popup/ico-calendar02.svg') no-repeat center;
+}
+
+.btnSectionCollapse {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-width: auto;
+  width: 36px;
+  height: 36px;
+  border-radius: 6px;
+  border: 1px solid #888;
+  background-color: var(--background-white1);
+  padding: 0;
+  background-image: url('../../assets/button/ico-collapse-false.svg');
+  background-repeat: no-repeat;
+  background-position: center;
+
+  &.active {
+    background-image: url('../../assets/button/ico-collapse-true.svg');
+  }
+}
+
+.tableInButton {
+  margin: 0 auto;
+}
+
+.btnChange {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 64px;
+  height: 64px;
+  border-radius: 50%;
+  border: 1px solid #e4e4e4;
+}
+
+.btnTableDownload {
+  min-width: auto;
+  margin: 0 auto;
+  width: 40px !important;
+  height: 36px;
+  border-radius: 6px;
+  border: 1px solid #888;
+  padding: 0;
+  background-color: var(--background-white1);
+
+  &[class*='i'] {
+    &::before {
+      margin-right: 0;
+    }
+  }
+}
+
+.btnToggleExpansion {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 20px;
+  height: 20px;
+  transition: var(--transition);
+  background: url('../../assets/header/ico-expansion.svg') no-repeat center;
+
+  &.active {
+    background: url('../../assets/header/ico-reduction.svg') no-repeat center;
+  }
+}
+
+@media (hover: hover) {
+  .baseButton:hover {
+    font-weight: var(--fw700);
+
+    &.mixBlue {
+      font-weight: inherit;
+    }
+
+    &.bdGray {
+      border-color: var(--border-black1);
+      color: var(--text-color-black2);
+    }
+
+    &.bdBlue {
+      background-color: var(--background-blue4);
+    }
+
+    &.bgBlue {
+      background-color: var(--background-blue6);
+    }
+
+    &.bgRed {
+      background-color: #de3745;
+    }
+
+    &.bgAqua {
+      background-color: var(--background-aqua2);
+    }
+
+    &.bgGray {
+      background-color: var(--background-black1);
+    }
+
+    &.i-excel {
+      &::before {
+        background-image: url('../../assets/button/ico-excel-hover.svg');
+      }
+    }
+
+    &.i-gis-zoom-in {
+      &::before {
+        background-image: url('../../assets/gis/ico-tool-zoom-in-hover.svg');
+      }
+    }
+
+    &.i-gis-zoom-out {
+      &::before {
+        background-image: url('../../assets/gis/ico-tool-zoom-out-hover.svg');
+      }
+    }
+
+    &.i-gis-area {
+      &::before {
+        background-image: url('../../assets/gis/ico-tool-area-hover.svg');
+      }
+    }
+
+    &.i-gis-ruler {
+      &::before {
+        background-image: url('../../assets/gis/ico-tool-ruler-hover.svg');
+      }
+    }
+
+    &.i-gis-reset {
+      &::before {
+        background-image: url('../../assets/gis/ico-tool-reset-hover.svg');
+      }
+    }
+
+    &.i-gis-mountain {
+      border-color: #76de50;
+      color: #76de50;
+    }
+
+    &.i-gis-information {
+      border-color: #40c7f5;
+      color: #40c7f5;
+    }
+
+    &.i-gis-map {
+      border-color: #ffb412;
+      color: #ffb412;
+    }
+
+    &.i-gis-location {
+      border-color: #ff5a5a;
+      color: #ff5a5a;
+    }
+
+    &.i-gis-airplane {
+      border-color: #e291ff;
+      color: #e291ff;
+    }
+  }
+
+  .btnCardItemButton:hover {
+    background-color: var(--primary3);
+  }
+
+  .btnCardSetting:hover {
+    border-color: transparent;
+    background: var(--primary3) url('../../assets/card/ico-setting-white.svg')
+      no-repeat center;
+  }
+
+  .btnCardSettingSave:hover {
+    color: var(--text-color-white1);
+    border-color: transparent;
+    background-color: var(--primary3);
+  }
+
+  .btnRemove:hover {
+    background-color: var(--background-black1);
+  }
+}

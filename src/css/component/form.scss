@@ -1,0 +1,699 @@
+.baseTextFieldWrapper {
+  position: relative;
+
+  button {
+    position: absolute;
+    top: 6px;
+
+    right: 16px;
+  }
+
+  &.hasBeforeText {
+    display: flex;
+    align-items: center;
+    column-gap: 8px;
+  }
+
+  &.error {
+    flex-direction: column;
+  }
+}
+
+.baseTextField {
+  width: 100%;
+  height: 36px;
+  border-radius: 6px;
+  padding: 0 16px;
+  font-size: var(--fs14);
+  color: var(--text-color-black4);
+  border: 1px solid #888;
+  background-color: var(--background-white1);
+  transition: var(--transition);
+  outline: 0;
+
+  &:not(.loginInput):not([readonly]) {
+    &:focus,
+    &:focus-visible {
+      border-color: var(--border-blue2);
+    }
+  }
+
+  &.hasCalendar {
+    padding: 0 47px 0 16px;
+  }
+
+  &::placeholder {
+    font-size: var(--fs14);
+    color: var(--text-color-gray5);
+  }
+
+  &.error {
+    border-color: #eb003b;
+  }
+
+  &.grayscale {
+    border-color: var(--border-disabled);
+    background-color: #d6dae2;
+
+    &[disabled] {
+      color: #888;
+    }
+  }
+
+  &.fileInput {
+    width: 100%;
+  }
+}
+
+.errorMessage {
+  display: flex;
+  align-items: center;
+  column-gap: 4px;
+  margin-top: 8px;
+  font-size: 0.75rem;
+  font-weight: var(--fw400);
+  color: #eb003b;
+
+  &::before {
+    content: '';
+    width: 16px;
+    height: 16px;
+    background: url('../../assets/icons/ico-error.svg');
+    background-size: 16px;
+  }
+}
+
+.baseSelectWrapper {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+
+  &.hasBeforeText {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    column-gap: 8px;
+  }
+
+  & + & {
+    margin-left: 8px;
+  }
+
+  + .baseCheckboxWrapper {
+    margin-left: 10px;
+  }
+
+  + .baseTextFieldWrapper {
+    margin-left: 8px;
+  }
+
+  &.footerType {
+    .baseSelectList {
+      top: -180px;
+    }
+
+    .baseSelectButton {
+      color: var(--text-color-gray1);
+    }
+
+    .baseSelectValue {
+      display: flex;
+      align-items: center;
+      column-gap: 8px;
+      border: 1px solid #ccc;
+      color: var(--text-color-gray1);
+      background-image: none;
+
+      &::after {
+        content: '';
+        width: 11px;
+        height: 7px;
+        background: url('../../assets/footer/ico-select-triangle.svg') no-repeat
+          center;
+        transform: rotate(180deg);
+      }
+    }
+
+    &.active {
+      .baseSelectValue {
+        &::after {
+          transform: rotate(0deg);
+        }
+      }
+    }
+  }
+
+  &.error {
+    .baseSelectValue {
+      border-color: #eb003b;
+    }
+  }
+
+  &.disabled {
+    .baseSelectValue {
+      border-color: var(--border-disabled);
+      color: #888;
+      background: #d6dae2 url('../../assets/icons/ico-select-down-disable.svg')
+        no-repeat center right 8px;
+    }
+  }
+
+  &.active {
+    .baseSelectList {
+      display: block;
+    }
+
+    &:not(.footerType) {
+      .baseSelectValue {
+        border-color: var(--border-blue2);
+      }
+    }
+  }
+}
+
+.baseRadioLabel,
+.baseCheckboxLabel {
+  position: relative;
+  display: flex;
+  align-items: center;
+  column-gap: 8px;
+  cursor: pointer;
+}
+
+.baseInput {
+  &.disabled {
+    + label {
+      cursor: not-allowed;
+      user-select: none;
+
+      &::before {
+        border-color: var(--border-disabled);
+        background-color: #d8d8d8;
+      }
+      &::after {
+        background-color: #c6c6c6;
+      }
+    }
+  }
+}
+
+.baseCheckbox {
+  &.disabled {
+    + label {
+      &::after {
+        background: url('../../assets/icons/ico-checkbox2-disable.svg')
+          no-repeat center;
+        background-size: 16px;
+      }
+    }
+  }
+
+  &:checked {
+    + label {
+      &::before {
+        background-color: var(--background-blue5);
+      }
+    }
+  }
+}
+
+.baseRadioLabel {
+  &::before {
+    content: '';
+    display: inline-block;
+    width: 22px;
+    height: 22px;
+    border-radius: 50%;
+    border: 1px solid var(--border-gray1);
+    background-color: var(--background-white1);
+    transition: var(--transition);
+  }
+
+  &::after {
+    content: '';
+    opacity: 0;
+    visibility: hidden;
+    position: absolute;
+    width: 12px;
+    height: 12px;
+    left: 6px;
+    top: 50%;
+    transform: translateY(-50%);
+    border-radius: 50%;
+    transition: var(--transition);
+    background-color: var(--background-blue5);
+  }
+}
+
+.baseRadioWrapper {
+  & + & {
+    margin-left: 30px;
+    padding-left: 0 !important;
+  }
+
+  + .tableDescription {
+    margin-left: 30px;
+  }
+
+  &.sm {
+    .baseRadioLabel {
+      &::before {
+        width: 20px;
+        height: 20px;
+      }
+
+      &::after {
+        width: 10px;
+        height: 10px;
+        left: 6px;
+      }
+    }
+  }
+}
+
+.baseCheckboxWrapper {
+  & + & {
+    margin-left: 30px;
+    padding-left: 0 !important;
+  }
+  &.sm {
+    .baseCheckboxLabel {
+      &::before {
+        width: 20px;
+        height: 20px;
+      }
+
+      &::after {
+        width: 22px;
+        height: 22px;
+        background-size: 12px;
+        left: 0;
+      }
+    }
+
+    &[aria-checked='mixed'] {
+      .baseCheckboxLabel {
+        &::after {
+          background-size: 12px;
+        }
+      }
+    }
+  }
+
+  &.sm2 {
+    .baseCheckboxLabel {
+      &::before {
+        width: 18px;
+        height: 18px;
+      }
+
+      &::after {
+        width: 20px;
+        height: 20px;
+        left: 0;
+        background-size: 10px;
+      }
+    }
+
+    &[aria-checked='mixed'] {
+      .baseCheckboxLabel {
+        &::after {
+          background-size: 10px;
+        }
+      }
+    }
+  }
+
+  &[aria-checked='mixed'] {
+    .baseCheckboxLabel {
+      &::before {
+        border-color: var(--border-blue1);
+        background-color: var(--background-blue5);
+      }
+
+      &::after {
+        opacity: 1;
+        visibility: visible;
+        z-index: 0;
+        background: url('../../assets/icons/ico-toggle-indeterminate.svg')
+          no-repeat center;
+      }
+    }
+
+    .baseCheckbox {
+      &[disabled] {
+        + label {
+          &::before {
+            border-color: var(--border-disabled);
+            background-color: #d8d8d8;
+          }
+
+          &::after {
+            background: url('../../assets/icons/ico-toggle-indeterminate-disable.svg')
+              no-repeat center;
+          }
+        }
+      }
+    }
+  }
+}
+
+.baseCheckboxLabel {
+  &::before {
+    content: '';
+    width: 22px;
+    height: 22px;
+    border-radius: 4px;
+    border: 1px solid var(--border-gray1);
+    background-color: var(--background-white1);
+    transition: var(--transition);
+    transition-property: background-color;
+  }
+
+  &::after {
+    content: '';
+    opacity: 0;
+    visibility: hidden;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    left: 1px;
+    width: 22px;
+    height: 22px;
+    transition: var(--transition);
+    z-index: -1;
+    background: url('../../assets/icons/ico-checkbox2.svg') no-repeat center;
+    background-size: 16px;
+  }
+}
+
+.baseInput {
+  &.baseRadio,
+  &.baseCheckbox {
+    &:checked {
+      + label {
+        &::before {
+          border-color: var(--border-blue1);
+        }
+        &::after {
+          opacity: 1;
+          visibility: visible;
+          z-index: 10;
+        }
+      }
+    }
+
+    &.disabled {
+      &:checked {
+        + label {
+          &::before {
+            border-color: var(--border-disabled);
+            background-color: #d8d8d8;
+          }
+        }
+      }
+    }
+  }
+}
+
+.baseSelectValue {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  height: 36px;
+  font-size: var(--fs14);
+  font-weight: var(--fw400);
+  color: var(--text-color-black4);
+  transition: var(--transition);
+  padding: 0 16px;
+  outline: 0;
+  border-radius: 6px;
+  border: 1px solid var(--border-gray1);
+  background: var(--background-white1)
+    url('../../assets/icons/ico-select-down.svg') no-repeat center right 8px;
+
+  &[disabled] {
+    cursor: not-allowed;
+  }
+}
+
+.baseSelectList {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 100%;
+  top: 36px;
+  border-radius: 8px;
+  border: 1px solid #d8d8d8;
+  background-color: var(--background-white1);
+  transition: var(--transition);
+  display: none;
+  padding: 10px 0;
+  z-index: 100;
+  overflow-y: auto;
+}
+
+.baseSelectItem {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  height: 36px;
+  padding: 0 10px;
+}
+
+.baseSelectButton {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+  padding: 0 16px;
+  border-radius: 6px;
+  font-size: var(--fs14);
+  font-weight: var(--fw400);
+  color: var(--text-color-black4);
+  transition: var(--transition);
+}
+
+.baseTextarea {
+  border: 1px solid var(--border-gray1);
+  border-radius: 8px;
+  padding: 16px;
+  background-color: var(--background-white1);
+  resize: none;
+  font-size: 1.0625rem;
+  font-weight: var(--fw400);
+  color: var(--text-color-black4);
+  transition: var(--transition);
+}
+
+.fileInputBox {
+  height: 100%;
+
+  .baseTextFieldWrapper {
+    width: 100%;
+  }
+}
+
+.inputBoxLabel {
+  margin-right: 15px;
+  white-space: nowrap;
+}
+
+.searchColumnInputGroup {
+  display: flex;
+  align-items: center;
+  column-gap: 10px;
+}
+
+.searchColumnRow {
+  display: flex;
+  align-items: center;
+  column-gap: 50px;
+  padding-bottom: 15px;
+  border-bottom: 1px solid #d7dde8;
+
+  /*
+    241107
+    sm801, bs1201 처럼 column이 3개이상일 때.
+
+    기본 사이즈는 165px정도로 하고, 마지막 column은 여백없이 모두 채우기
+   */
+  &.col3more {
+    .searchColumn {
+      .baseSelectWrapper,
+      .baseTextFieldWrapper {
+        min-width: 165px;
+        flex: none;
+        // max-width: 165px;
+      }
+
+      &:last-child {
+        flex: 1;
+
+        .baseSelectWrapper,
+        .baseTextFieldWrapper {
+          min-width: auto;
+          max-width: none;
+          flex: 1;
+        }
+
+        .searchColumnInputBox {
+          flex: 1;
+        }
+      }
+    }
+  }
+
+  /* 
+    241107
+    bs205 처럼 column이 4개이상으로 많아져서 inputBox 사이즈를 가능한 줄여야될 때.
+  */
+  &.col3moreSmall {
+    .searchColumn {
+      .baseSelectWrapper {
+        min-width: 138px;
+      }
+
+      &:last-child {
+        flex: 1;
+
+        .baseSelectWrapper,
+        .baseTextFieldWrapper {
+          min-width: auto;
+          max-width: none;
+          flex: 1;
+        }
+      }
+
+      &.flex1 {
+        .baseTextFieldWrapper,
+        .baseSelectWrapper {
+          min-width: auto;
+          max-width: none;
+          flex: inherit;
+        }
+      }
+    }
+  }
+
+  &:last-of-type {
+    padding-bottom: 0;
+    border-bottom: 0;
+  }
+
+  & + & {
+    padding-top: 15px;
+  }
+
+  &.noSb {
+    justify-content: flex-start;
+  }
+}
+
+.searchColumnRowContainer {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+.placeholderInput {
+  position: absolute;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 100;
+  pointer-events: none;
+
+  &Style {
+    &::placeholder {
+      font-size: var(--fs14);
+      font-weight: var(--fw400);
+      color: var(--text-color-gray5);
+    }
+  }
+
+  + .file {
+    width: 100%;
+  }
+}
+
+//q-markupTable
+.baseTable {
+  td {
+    .fileInputBoxWrapper {
+      column-gap: 5px;
+      flex: 1;
+    }
+
+    .baseButton {
+      &.fileButton {
+        width: fit-content;
+      }
+    }
+  }
+}
+
+.fileInputBoxWrapper {
+  display: flex;
+  align-items: center;
+  flex: 1;
+  column-gap: 10px;
+
+  .btnRemove {
+    min-width: 36px;
+    width: auto;
+  }
+
+  + .baseTable {
+    margin-top: 20px;
+  }
+
+  &.wide {
+    .fileButton {
+      min-width: 168px;
+    }
+  }
+
+  &.end {
+    justify-content: flex-end;
+  }
+}
+
+.fileInputBox {
+  position: relative;
+  flex: 1;
+  display: flex;
+  min-width: 130px;
+}
+
+.textareaBox {
+  display: flex;
+  flex-direction: column;
+  row-gap: 12px;
+}
+
+.textareaTitle {
+  width: fit-content;
+  font-size: var(--fs15);
+  font-weight: var(--fw400);
+  color: var(--text-color-black4);
+}
+
+.stringCount {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  width: 100%;
+  column-gap: 2.5px;
+  font-size: var(--fs15);
+  font-weight: var(--fw400);
+  color: var(--text-color-gray1);
+}
+
+@media (hover: hover) {
+  .baseSelectButton:hover {
+    color: var(--text-color-blue2) !important;
+    background-color: var(--background-gray4);
+  }
+}

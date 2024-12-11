@@ -1,0 +1,249 @@
+.baseTabWrapper {
+  width: 100%;
+
+  &.hasTabLength7 {
+    .baseTabItem {
+      min-width: 204px;
+      flex: none;
+    }
+
+    .tabType2,
+    .tabType3 {
+      .baseTabItem {
+        min-width: 174px;
+      }
+    }
+  }
+
+  &.tabType2 {
+    padding: 0 30px 60px 30px;
+
+    .baseTabList {
+      &::before {
+        display: none;
+      }
+    }
+
+    .baseTabItem {
+      min-width: auto;
+      height: 50px;
+
+      &.active {
+        border-left: 1px solid var(--border-blue1);
+        border-color: var(--border-blue1);
+
+        + .baseTabItem {
+          border-left: 0;
+          border-right: 1px solid #c2c9de;
+        }
+
+        &::before,
+        &::after {
+          display: none;
+        }
+      }
+    }
+  }
+
+  &.tabType3 {
+    padding: 0 30px 60px 30px;
+
+    .baseTabList {
+      &::before {
+        display: none;
+      }
+    }
+
+    .baseTabItem {
+      min-width: auto;
+      height: 50px;
+
+      &.active {
+        border-left: 1px transparent;
+        border-color: transparent;
+        background-color: #2a45ae;
+
+        .baseTabItemButton {
+          color: var(--text-color-white1);
+        }
+
+        .baseTabCount {
+          color: var(--text-color-white1);
+        }
+
+        + .baseTabItem {
+          border-left: 0;
+          border-right: 1px solid #c2c9de;
+        }
+
+        &::before,
+        &::after {
+          display: none;
+        }
+      }
+    }
+  }
+}
+
+.baseTabInner {
+  position: relative;
+  z-index: 100;
+}
+
+.baseTabInnerGroup {
+  display: flex;
+  align-items: center;
+  column-gap: 8px;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  right: 0;
+  z-index: 110;
+}
+
+.baseTabItem {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex: 1;
+  // min-width: 204px;
+  height: 46px;
+  border: 1px solid #c2c9de;
+  background-color: var(--background-white2);
+
+  & + & {
+    border-left: 0;
+  }
+
+  &.active {
+    background-color: var(--background-white1);
+
+    &:first-of-type {
+      &::after {
+        // width: calc(100% - 1.5px);
+        width: 100%;
+      }
+    }
+
+    .baseTabItemButton {
+      font-weight: var(--fw700);
+      color: var(--text-color-blue1);
+    }
+
+    .baseTabCount {
+      font-weight: var(--fw700);
+      color: var(--text-color-blue1);
+    }
+
+    &::before {
+      content: '';
+      position: absolute;
+      top: -1px;
+      left: -2px;
+      border: 2px solid var(--background-blue5);
+      border-bottom: 0;
+      width: 100%;
+      height: 100%;
+      z-index: 20;
+    }
+
+    &::after {
+      content: '';
+      position: absolute;
+      // top: 1px;
+      top: -1px;
+      left: 50%;
+      transform: translateX(-50%);
+      border-bottom: 2px solid white;
+      // width: calc(100% - 1.9px);
+      width: 100%;
+      height: 100%;
+      z-index: 20;
+    }
+  }
+}
+
+.baseTabList {
+  display: flex;
+  align-items: center;
+  position: relative;
+  z-index: 100;
+
+  &::before {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    border-top: 2px solid var(--background-blue5);
+    width: 100%;
+    z-index: 10;
+  }
+}
+
+.baseTabItemButton {
+  position: relative;
+  z-index: 30;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  column-gap: 3px;
+  width: 100%;
+  height: 100%;
+  line-height: normal;
+  font-size: var(--fs16);
+  font-weight: var(--fw400);
+  padding: 0 16px;
+  color: var(--text-color-gray1);
+}
+
+.baseTabContentBox {
+  padding-top: 40px;
+
+  .sectionBox {
+    &:last-of-type {
+      padding-bottom: 0;
+    }
+
+    + .sectionBox {
+      margin-top: 60px;
+    }
+  }
+}
+
+.baseTabCount {
+  display: flex;
+  align-items: center;
+
+  &::before {
+    content: '(';
+  }
+
+  &::after {
+    content: ')';
+  }
+}
+
+.tabContentBox {
+  padding: 40px 0 0 0;
+
+  .sectionBox {
+    + .sectionBox {
+      margin-top: 60px;
+    }
+  }
+}
+
+.sectionContainer {
+  .tabType2,
+  .tabType3 {
+    padding: 0;
+
+    &.hasTabLength9 {
+      .baseTabItem {
+        flex: none;
+        min-width: 174px;
+      }
+    }
+  }
+}

@@ -1,0 +1,191 @@
+.loginContainer {
+  width: 100%;
+  max-width: 1270px;
+  margin: 0 auto;
+
+  .loginInput {
+    border-color: transparent;
+    border-radius: 4px;
+    background-color: var(--background-white1);
+    width: 100%;
+    height: 42px;
+    font-size: var(--fs15);
+    color: var(--text-color-black4);
+
+    &::placeholder {
+      font-size: var(--fs15);
+      color: #8889b8;
+    }
+  }
+}
+
+.loginInner {
+  display: flex;
+  justify-content: space-between;
+  position: relative;
+
+  &::before {
+    content: '';
+    position: absolute;
+    bottom: -70px;
+    left: 0;
+    width: 792px;
+    height: 631px;
+    background: url('../../assets/login/img-login.png') no-repeat center;
+    background-size: 792px 631px;
+  }
+}
+
+.loginLogo {
+  padding-top: 62px;
+}
+
+.loginBox {
+  min-width: 380px;
+  padding: 45px 50px;
+  border-radius: 0 0 32px 32px;
+  background-color: #4365d7;
+}
+
+.loginBoxInner {
+  padding-top: 69px;
+}
+
+.loginIcons {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  max-width: 122px;
+}
+
+.loginBoxLogo {
+  margin-top: 30px;
+  display: flex;
+  flex-direction: column;
+}
+
+.loginBoxLogoText {
+  margin-top: 20px;
+  font-size: 2rem;
+  font-weight: var(--fw700);
+  color: var(--text-color-white1);
+}
+
+.loginBoxLogoEngText {
+  margin-top: 5px;
+  font-size: var(--fs15);
+  color: #b4b5ff;
+  font-weight: var(--fw400);
+}
+
+.loginInputBox {
+  margin-top: 30px;
+  display: flex;
+  flex-direction: column;
+  row-gap: 30px;
+}
+
+.loginInputGroup {
+  display: flex;
+  flex-direction: column;
+  row-gap: 16px;
+}
+
+.loginCheckbox {
+  column-gap: 5px;
+
+  .baseCheckbox {
+    &:checked {
+      + label {
+        &::before {
+          background-image: none;
+        }
+
+        &::after {
+          left: -1px;
+          background-size: 12px;
+        }
+      }
+    }
+  }
+
+  .baseCheckboxLabel {
+    font-size: var(--fs15);
+    color: #b4b5ff;
+    font-weight: var(--fw400);
+
+    &::before {
+      width: 18px;
+      height: 18px;
+      border-color: transparent;
+      background-repeat: no-repeat;
+      background-position: center;
+      background-image: url('../../assets/icons/ico-checkbox.svg');
+    }
+  }
+}
+
+.loginRight {
+  display: flex;
+  flex-direction: column;
+  row-gap: 25px;
+}
+
+.loginFooter {
+  display: flex;
+  flex-direction: column;
+  margin-left: 10px;
+}
+
+.loginFooterInfo {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.loginFooterLogo {
+  margin-bottom: 16px;
+}
+
+.loginFooterAddress,
+.loginFooterTel,
+.loginCopy {
+  font-size: var(--fs13);
+}
+
+.loginFooterAddress {
+  font-style: normal;
+  color: #626262;
+  font-weight: var(--fw400);
+}
+
+.loginFooterTel {
+  display: flex;
+  align-items: center;
+  color: #626262;
+  font-weight: var(--fw700);
+  text-decoration: none;
+
+  &::before {
+    content: '';
+    width: 1px;
+    height: calc(100% - 3px);
+    margin: 0 10px;
+    background-color: #e1e1e1;
+  }
+}
+
+.loginCopy {
+  margin-top: 5px;
+  font-weight: var(--fw400);
+  color: #888;
+}
+
+@media screen and (max-width: 1746px) {
+  .loginInner {
+    &::before {
+      bottom: -30px;
+      background-size: 700px;
+    }
+  }
+}

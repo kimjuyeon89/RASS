@@ -1,0 +1,637 @@
+.baseTable {
+  width: 100%;
+  border-top: 1px solid var(--border-blue1);
+
+  &.commentTable {
+    tr {
+      &:last-of-type {
+        td {
+          border-bottom: 0;
+        }
+      }
+    }
+  }
+
+  &.sm {
+    th,
+    td {
+      height: 40px;
+    }
+  }
+
+  table {
+    width: 100%;
+    border-bottom: 1px solid var(--border-table);
+  }
+
+  .baseSelectList {
+    max-height: 135px;
+  }
+
+  .baseCheckboxLabel {
+    justify-content: center;
+  }
+
+  .baseTextFieldWrapper {
+    display: flex;
+
+    + .baseButton {
+      margin-left: 8px;
+    }
+  }
+
+  td {
+    .baseInput {
+      width: 100%;
+    }
+  }
+
+  tbody {
+    //hover display none
+    td {
+      .baseButton {
+        width: 100%;
+      }
+    }
+
+    tr {
+      &.ht1 {
+        td {
+          height: 184px;
+        }
+      }
+
+      &.ht2 {
+        td {
+          height: 144px;
+        }
+      }
+    }
+  }
+
+  th {
+    font-weight: var(--fw600);
+    line-height: 18px;
+    border-right: 1px solid var(--border-table);
+    border-bottom-color: var(--border-table);
+    background-color: var(--background-white2);
+
+    &:last-of-type {
+      border-right: 0;
+    }
+  }
+
+  th,
+  td {
+    padding: 0 6px;
+    font-size: var(--fs14);
+    word-break: keep-all;
+    color: var(--text-color-black2);
+  }
+
+  td {
+    border-right: 1px solid var(--border-table);
+    border-bottom-color: var(--border-table);
+    font-weight: var(--fw400);
+
+    &:last-of-type {
+      border-right: 0;
+    }
+
+    &.blue {
+      background-color: var(--background-blue2);
+    }
+  }
+
+  tr {
+    &:first-child {
+      th {
+        &[rowspan] {
+          border-left: 1px solid var(--border-table);
+        }
+
+        &:first-child {
+          &[rowspan] {
+            border-left: 0;
+          }
+        }
+      }
+    }
+  }
+}
+
+.trBlue {
+  td {
+    background-color: #eef2fa;
+  }
+}
+
+.trYellow {
+  td {
+    background-color: #fff9e0;
+  }
+}
+
+.tdBlue {
+  background-color: #eef2fa !important;
+}
+
+.tr-h73 {
+  th {
+    height: 73px !important;
+  }
+}
+
+.baseTable {
+  th,
+  td {
+    height: 50px;
+    font-size: var(--fs14);
+    color: var(--text-color-black2);
+
+    .baseCheckboxLabel {
+      width: fit-content;
+      margin: 0 auto;
+    }
+  }
+
+  td {
+    border-bottom: 1px solid var(--border-table);
+
+    &.text-left {
+      padding: 6.5px 20px !important;
+    }
+  }
+
+  thead {
+    th {
+      font-weight: var(--fw600);
+      border-bottom: 1px solid var(--border-table);
+    }
+  }
+
+  tbody {
+    td {
+      font-weight: var(--fw400);
+    }
+  }
+
+  tr {
+    &:last-of-type {
+      td {
+        border-bottom: 1px solid var(--border-table);
+      }
+    }
+  }
+
+  .baseTextarea {
+    height: 100%;
+  }
+
+  + .tableDescription {
+    margin-top: 30px;
+  }
+
+  &:not(.rowType) {
+    &.overflow-y {
+      thead {
+        th {
+          position: sticky;
+          top: 0;
+          z-index: 20;
+        }
+      }
+    }
+  }
+
+  & + & {
+    margin-top: 25px;
+  }
+
+  &.double {
+    & + & {
+      margin-top: 40px;
+    }
+  }
+
+  &.rowType {
+    .baseTextarea {
+      width: 100%;
+    }
+
+    .baseTable {
+      .baseCheckboxWrapper,
+      .beforeText {
+        padding-left: 0;
+      }
+    }
+
+    // tr {
+    //   &:last-of-type {
+    //     th {
+    //       border-bottom: 0;
+    //     }
+
+    //     td {
+    //       border-bottom: 0;
+    //     }
+    //   }
+    // }
+
+    th {
+      height: 50px;
+      border-right: 1px solid var(--border-table);
+      border-bottom: 1px solid var(--border-table);
+      padding: 0 10px;
+    }
+
+    td {
+      border-bottom: 1px solid var(--border-table);
+      padding: 6.5px;
+
+      .baseRadioWrapper,
+      .baseCheckboxWrapper,
+      .beforeText {
+        padding-left: 14px;
+      }
+
+      &.tdHasTable {
+        padding: 0;
+        border-bottom: 0;
+
+        .baseTable {
+          border-top-color: var(--border-table);
+
+          table {
+            border-bottom: 0;
+          }
+        }
+
+        .fileInputBoxWrapper {
+          padding: 7px;
+        }
+
+        .tableBox {
+          row-gap: 7px;
+        }
+
+        td {
+          padding: 0 6.5px;
+        }
+
+        thead {
+          th {
+            &:last-child {
+              border-right: 0;
+            }
+          }
+        }
+      }
+    }
+
+    .rowTableItem {
+      // width: 100%;
+
+      .baseButton {
+        width: fit-content;
+      }
+
+      &.btnWd90 {
+        .fileInputBox {
+          + .baseButton {
+            min-width: 90px;
+          }
+        }
+      }
+    }
+
+    + .tableDescription {
+      max-width: 840px;
+      line-height: 24px;
+    }
+  }
+
+  &.join {
+    + .baseTable {
+      border-top: 0;
+      margin-top: 0;
+    }
+  }
+
+  &::-webkit-scrollbar {
+    height: 10px;
+  }
+
+  &.overflow-y {
+    overflow-y: auto;
+  }
+
+  &.overflow-x {
+    overflow-x: auto;
+  }
+}
+
+.rowTableItemBox {
+  display: flex;
+  align-items: center;
+
+  &.column {
+    align-items: flex-start;
+    row-gap: 10px;
+    flex-direction: column;
+
+    .rowTableItem {
+      margin-left: 0;
+    }
+  }
+}
+
+.borderBox {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 55px;
+  height: 100%;
+  position: relative;
+
+  + .baseTextFieldWrapper {
+    margin-left: 6.5px;
+  }
+
+  &::after {
+    content: '';
+    width: 1px;
+    height: 50px;
+    border-right: 1px solid var(--border-table);
+  }
+}
+
+.borderBoxValue {
+  padding: 0 6.5px;
+  font-size: var(--fs14);
+  font-weight: var(--fw400);
+  color: var(--text-color-black2);
+}
+
+.borderBoxText {
+  display: flex;
+  justify-content: center;
+  flex: 1;
+  height: 100%;
+}
+
+.rowTableItem {
+  display: flex;
+  align-items: center;
+  column-gap: 5px;
+
+  &.inSection {
+    .baseButton {
+      + .fileInputBox {
+        margin-left: 34px;
+      }
+    }
+  }
+
+  + .baseButton {
+    margin-left: 20px;
+  }
+
+  .hasBeforeText {
+    .baseInput,
+    .baseSelectValue {
+      width: 173px;
+      flex: none;
+    }
+  }
+
+  .baseInput {
+    flex: 1;
+
+    + .baseButton {
+      margin-left: 8px;
+    }
+  }
+
+  // .baseButton {
+  //   + .baseButton {
+  //     margin-left: 8px;
+  //   }
+  // }
+
+  .baseTextFieldWrapper {
+    flex: 1;
+  }
+
+  &.gap0 {
+    column-gap: 0;
+  }
+
+  & + & {
+    margin-left: 20px;
+  }
+
+  &.flexNone {
+    .baseTextFieldWrapper,
+    .baseInput {
+      flex: none;
+    }
+  }
+}
+
+//#EE4444 => (app.scss) .text-color-red
+.required {
+  display: flex;
+  align-items: center;
+  column-gap: 3px;
+
+  &::after {
+    content: '*';
+    color: #ee4444;
+  }
+
+  &.center {
+    justify-content: center;
+  }
+  &.cell{
+    display: table-cell;
+  }
+}
+
+.tableDescription {
+  font-size: var(--fs14);
+  font-weight: var(--fw500);
+  color: var(--text-color-black4);
+}
+
+.tableUnit {
+  font-size: var(--fs14);
+  font-weight: var(--fw500);
+  color: var(--text-color-black4);
+
+  & + & {
+    margin-left: 5px;
+  }
+}
+
+.tableBox {
+  display: flex;
+  align-items: center;
+  column-gap: 5px;
+
+  .baseTextFieldWrapper {
+    flex: none;
+  }
+
+  &.end {
+    justify-content: flex-end;
+  }
+
+  &.hasInput {
+    .baseTextFieldWrapper {
+      flex: 1;
+    }
+  }
+
+  &.hasFile {
+    column-gap: 20px;
+
+    .fileInputBox {
+      max-width: 300px;
+    }
+
+    .tableDescription {
+      min-width: 210px;
+      margin-right: 50px;
+    }
+  }
+
+  &.col {
+    align-items: flex-start;
+    flex-direction: column;
+  }
+}
+
+.tableBoxItem {
+  display: flex;
+  flex: 1;
+
+  .baseInput {
+    width: 100%;
+
+    &[readonly] {
+      border: 1px solid var(--border-gray1);
+      background-color: var(--background-white1);
+    }
+  }
+
+  .baseSelectWrapper {
+    flex: 1;
+  }
+
+  &.hasImage {
+    max-width: 319px;
+  }
+}
+
+.tableImageBox {
+  flex: 1;
+
+  img {
+    display: block;
+  }
+}
+
+.tableImageArea {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 186px;
+  border: 1px solid #d8d8d8;
+  background-color: #fafafa;
+}
+
+.tableImageBoxGroup {
+  display: flex;
+  align-items: center;
+  column-gap: 5px;
+  margin-top: 8px;
+
+  .baseButton {
+    max-width: 130px;
+    padding: 0;
+    width: 100%;
+  }
+
+  .baseTextFieldWrapper {
+    max-width: 192px;
+  }
+}
+
+.numberBox {
+  .baseInput {
+    font-size: 1.3125rem;
+    font-weight: var(--fw600);
+    color: var(--text-color-black4);
+  }
+
+  + .tableBox {
+    margin-top: 16px;
+  }
+}
+
+.securityArea {
+  padding: 23.5px 9.5px; //위아래 29px 양옆 16px
+
+  .numberBox {
+    max-width: 200px;
+
+    .baseTextField {
+      height: 40px;
+    }
+  }
+
+  .securityInput {
+    max-width: 200px;
+
+    width: 100%;
+  }
+
+  .baseButton {
+    width: fit-content !important;
+  }
+}
+
+.beforeText {
+  font-size: var(--fs14);
+  font-weight: var(--fw400);
+  color: var(--text-color-black4);
+
+  & + & {
+    padding-left: 0 !important;
+  }
+}
+
+.tableListUl {
+  display: flex;
+  flex-direction: column;
+  row-gap: 15px;
+}
+
+.tableListText {
+  display: flex;
+  align-items: center;
+  column-gap: 2px;
+  font-size: var(--fs14);
+  font-weight: var(--fw400);
+  color: var(--text-color-black2);
+
+  &::before {
+    content: '*';
+  }
+}
+
+.tdPdWide {
+  padding: 30px 20px !important;
+}

@@ -1,0 +1,320 @@
+@font-face {
+  font-family: 'Pretendard GOV Variable';
+  font-display: block;
+  src: url(/fonts/PretendardGOVVariable.woff2);
+}
+
+//global variables
+:root {
+  --fs18: 1.125rem;
+  --fs16: 1rem;
+  --fs15: 0.9375rem;
+  --fs14: 0.875rem;
+  --fs13: 0.8125rem;
+
+  --fw400: 400; // regular
+  --fw500: 500; // medium
+  --fw600: 600; // semibold
+  --fw700: 700; // bold
+
+  --primary1: #3540aa;
+  --primary2: #2f468d;
+  --primary3: #21347d;
+
+  --text-color-gray1: #555;
+  --text-color-gray2: #626262;
+  --text-color-gray3: #646464;
+  --text-color-gray4: #e1e1e1;
+  --text-color-gray5: #8e8e8e;
+
+  --text-color-black1: #101010;
+  --text-color-black2: #222;
+  --text-color-black3: #333;
+  --text-color-black4: #1d1d1d;
+
+  --text-color-black5: #444;
+  --text-color-black6: #000;
+
+  --text-color-white1: #fff;
+  --text-color-white1-rgb: 255, 255, 255;
+
+  --text-color-blue1: #2a45ae;
+  --text-color-blue2: #003675;
+  --text-color-blue3: #1d56bc;
+
+  --border1: #dedede;
+  --border2: #ccc;
+
+  --border-table: #d8d8d8;
+
+  --border-gray1: #888;
+  --border-gray2: #999;
+
+  --border-black1: #222;
+
+  --border-blue1: #2a45ae;
+  --border-blue2: #5f8cff;
+  --border-blue3: #246beb;
+
+  --border-red1: #eb003b;
+
+  --background-orange1: #d87758;
+
+  --background-white1: #fff;
+  --background-white2: #f8f8f8;
+
+  --background-blue1: #ebf3ff;
+  --background-blue2: #eef2fa;
+  --background-blue3: #edf2fa;
+
+  --background-blue4: #f1f7ff;
+  --background-blue5: #2a45ae;
+  --background-blue6: #193088;
+  --background-blue7: #eff5ff;
+  --background-blue8: #5f8cff;
+
+  --background-gray1: #545454;
+  --background-gray2: #e7ebf5;
+  --background-gray3: #444;
+  --background-gray4: #edf1f5;
+
+  --background-aqua1: #09a2b7;
+  --background-aqua2: #078799;
+  --background-aqua3: #05a0b5;
+
+  --background-black1: #222;
+
+  --backgound-disabled: #e0e3e8;
+  --background-disabled2: #d8d8d8;
+  --border-disabled: #c6c6c6;
+  --text-color-disabled: #999;
+
+  --transition: 0.3s ease-in-out;
+}
+
+.po-a {
+  position: absolute;
+}
+
+.overflow-y {
+  overflow-y: auto;
+}
+
+body {
+  line-height: normal;
+  overflow-y: hidden;
+
+  &::-webkit-scrollbar {
+    height: 14px;
+  }
+
+  &::-webkit-scrollbar-thumb {
+    background-color: #333;
+    border-radius: 100px;
+  }
+}
+
+*:not(body) {
+  &::-webkit-scrollbar {
+    width: 12px;
+  }
+
+  &::-webkit-scrollbar-thumb {
+    background-color: #333;
+    border-radius: 100px;
+  }
+}
+
+input[type='date'] {
+  &::-webkit-calendar-picker-indicator,
+  &::-webkit-inner-spin-button {
+    opacity: 0;
+    appearance: none;
+  }
+}
+
+input[type='date']::-webkit-calendar-picker-indicator {
+  position: absolute; // 이를 설정하기 위해 사전에 relative를 설정한 것이다.
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background: transparent; // 배경은 투명하게,
+  color: transparent; // 글자도 투명하게! 이 두 설정을 통해 캘린더 아이콘을 사라지게 만든다.
+  cursor: pointer;
+}
+
+input[type='month'] {
+  &::-webkit-calendar-picker-indicator,
+  &::-webkit-inner-spin-button {
+    opacity: 0;
+    appearance: none;
+  }
+}
+
+input[type='month']::-webkit-calendar-picker-indicator {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background: transparent;
+  color: transparent;
+  cursor: pointer;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5 {
+  margin: 0;
+  line-height: inherit;
+  font-size: inherit;
+}
+
+ul {
+  margin: 0;
+  padding: 0;
+}
+
+li {
+  list-style: none;
+}
+
+p {
+  margin: 0;
+}
+
+button {
+  border: 0;
+  margin: 0;
+  padding: 0;
+  background-color: transparent;
+  cursor: pointer;
+}
+
+::-webkit-scrollbar-track {
+  background-color: transparent;
+}
+
+::-webkit-scrollbar-button {
+  display: none;
+}
+
+::-webkit-scrollbar-thumb {
+  border: solid transparent;
+  background-clip: padding-box;
+}
+
+.text-color-deep-blue {
+  color: var(--primary1) !important;
+}
+
+.text-left {
+  text-align: left !important;
+}
+
+.text-center {
+  text-align: center !important;
+}
+
+.text-right {
+  text-align: right !important;
+}
+
+.text-color-black {
+  color: var(--text-color-black2) !important;
+}
+
+.text-color-red {
+  color: #ee4444 !important;
+}
+
+.text-color-blue {
+  color: #246beb;
+}
+
+.text-color-blue2 {
+  color: var(--primary3) !important;
+}
+
+.table-background-blue {
+  background-color: #edf7ff !important;
+}
+
+.table-background-green {
+  background-color: #effded !important;
+}
+
+.table-background-red {
+  background-color: #fff2f2 !important;
+}
+
+.table-background-red2 {
+  background-color: #ffeeee !important;
+}
+
+.table-background-yellow {
+  background-color: #fffaed !important;
+}
+
+.table-background-gray {
+  background-color: #e9e9e9 !important;
+}
+
+.text-bold {
+  font-weight: var(--fw700) !important;
+}
+
+.text-underline {
+  text-decoration: underline;
+  text-underline-offset: 2px;
+}
+
+// .subInner {
+//   margin: 0 30px;
+// }
+
+#layoutRoot {
+  position: relative;
+  display: flex;
+  overflow-y: hidden;
+}
+
+input [type='file'] {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  padding: 0;
+  opacity: 0;
+  overflow: hidden;
+  border: 0;
+}
+
+[id*='Root']:not(#popupRoot, #gisRoot) {
+  min-width: 1400px;
+  overflow-x: hidden;
+
+  &:not(#layoutRoot, #popupRoot, #gisRoot) {
+    height: 100vh;
+    overflow-y: auto;
+  }
+}
+
+.windowRoot {
+  height: 100vh;
+  overflow-y: auto;
+}
+
+.po-a {
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 100;
+}
+
+#app {
+  position: relative;
+  height: 100%;
+}
