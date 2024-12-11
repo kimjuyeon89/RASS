@@ -134,13 +134,13 @@
             <tr>
               <th scope="col" class="text-center" >검수서식명</th>
               <td colspan="3">
-                <BaseInput inputType="text" inputValue="" placeholder="실폭도로 검수서식 v1.0" readonly/>
+                <BaseInput inputType="text" inputValue="" placeholder="실폭도로 검수서식 v1.0"/>
               </td>
             </tr>
             <tr>
               <th scope="col" class="text-center" >검수서식설명</th>
               <td colspan="3">
-                <BaseInput inputType="text" inputValue="06001" placeholder="실폭도로 검수서식 최초 서식" readonly/>
+                <BaseInput inputType="text" inputValue="06001" placeholder="실폭도로 검수서식 최초 서식"/>
               </td>
             </tr>
           </tbody>
