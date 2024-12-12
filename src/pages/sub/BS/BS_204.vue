@@ -940,7 +940,7 @@ let pageContainer = null;
 
 const handleScroll = () => {
   const scrollPosition = pageContainer?.scrollTop || 0; 
-  isSticky.value = scrollPosition >= 700; 
+  isSticky.value = scrollPosition >= 690; 
 };
 
 onMounted(() => {
